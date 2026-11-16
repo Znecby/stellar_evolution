@@ -1,0 +1,29 @@
+{
+    "display":  {
+                    "icon":  {
+                                 "id":  "stellar_evolution:slurry_mixer"
+                             },
+                    "title":  {
+                                  "translate":  "advancement.stellar_evolution.bio.slurry_mixer.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancement.stellar_evolution.bio.slurry_mixer.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true
+                },
+    "parent":  "stellar_evolution:industry/servo",
+    "criteria":  {
+                     "unlock":  {
+                                    "trigger":  "minecraft:inventory_changed",
+                                    "conditions":  {
+                                                       "items":  [
+                                                                     {
+                                                                         "items":  "stellar_evolution:slurry_mixer"
+                                                                     }
+                                                                 ]
+                                                   }
+                                }
+                 }
+}

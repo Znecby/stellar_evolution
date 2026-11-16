@@ -1,0 +1,46 @@
+{
+    "parent":  "minecraft:block/block",
+    "textures":  {
+                     "metal":  "stellar_evolution:block/tungsten_copper_hard_alloy_block",
+                     "glass":  {
+                                   "force_translucent":  true,
+                                   "sprite":  "minecraft:block/glass"
+                               },
+                     "particle":  "stellar_evolution:block/tungsten_copper_hard_alloy_block"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      0.02,
+                                      0,
+                                      4
+                                  ],
+                         "to":  [
+                                    4,
+                                    16,
+                                    12
+                                ],
+                         "faces":  {
+                                       "west":  {
+                                                    "texture":  "#glass",
+                                                    "uv":  [
+                                                               0,
+                                                               0,
+                                                               16,
+                                                               16
+                                                           ],
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#glass",
+                                                    "uv":  [
+                                                               0,
+                                                               0,
+                                                               16,
+                                                               16
+                                                           ]
+                                                }
+                                   }
+                     }
+                 ]
+}

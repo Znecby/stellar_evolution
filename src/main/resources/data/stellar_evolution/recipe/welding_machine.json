@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": "stellar_evolution:tungsten_rod",
+    "A": "stellar_evolution:tungsten_copper_hard_alloy_plate",
+    "X": "stellar_evolution:flux_coil",
+    "F": "stellar_evolution:copper_frame",
+    "C": "stellar_evolution:copper_plate"
+  },
+  "pattern": [
+    "TAT",
+    "XFX",
+    "CCC"
+  ],
+  "result": {
+    "id": "stellar_evolution:welding_machine"
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "model":  {
+                  "model":  "stellar_evolution:block/combined_cycle_gas_turbine_item",
+                  "type":  "minecraft:model"
+              }
+}

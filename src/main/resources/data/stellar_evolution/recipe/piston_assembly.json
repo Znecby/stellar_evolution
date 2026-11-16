@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "stellar_evolution:copper_rod",
+    "S": "stellar_evolution:steel_plate",
+    "C": "stellar_evolution:copper_gear"
+  },
+  "pattern": [
+    " R ",
+    "SCS",
+    " R "
+  ],
+  "result": {
+    "id": "stellar_evolution:piston_assembly"
+  }
+}

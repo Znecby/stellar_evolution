@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "": {
+            "type": "stellar_evolution:ctm_casing",
+            "base": "stellar_evolution:block/hatch/superconducting_coil_block",
+            "ctm": "stellar_evolution:block/hatch/superconducting_coil_block_ctm",
+            "bloom": "stellar_evolution:block/hatch/superconducting_coil_block_bloom",
+            "bloom_ctm": "stellar_evolution:block/hatch/superconducting_coil_block_bloom_ctm"
+        }
+    }
+}

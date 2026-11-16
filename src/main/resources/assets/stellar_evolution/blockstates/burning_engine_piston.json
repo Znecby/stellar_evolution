@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "stellar_evolution:block/burning_engine_piston" }
+    }
+}

@@ -1,0 +1,19 @@
+﻿{
+    "layers":  {
+                   "humanoid":  [
+                                    {
+                                        "texture":  "stellar_evolution:steel"
+                                    }
+                                ],
+                   "humanoid_leggings":  [
+                                             {
+                                                 "texture":  "stellar_evolution:steel"
+                                             }
+                                         ],
+                   "humanoid_baby":  [
+                                         {
+                                             "texture":  "stellar_evolution:steel"
+                                         }
+                                     ]
+               }
+}

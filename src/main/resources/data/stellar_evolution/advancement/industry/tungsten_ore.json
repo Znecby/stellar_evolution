@@ -1,0 +1,29 @@
+{
+    "display":  {
+                    "icon":  {
+                                 "id":  "stellar_evolution:tungsten_ore"
+                             },
+                    "title":  {
+                                  "translate":  "advancement.stellar_evolution.industry.tungsten_ore.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancement.stellar_evolution.industry.tungsten_ore.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true
+                },
+    "parent":  "stellar_evolution:root",
+    "criteria":  {
+                     "unlock":  {
+                                    "trigger":  "minecraft:inventory_changed",
+                                    "conditions":  {
+                                                       "items":  [
+                                                                     {
+                                                                         "items":  "stellar_evolution:tungsten_ore"
+                                                                     }
+                                                                 ]
+                                                   }
+                                }
+                 }
+}

@@ -1,0 +1,29 @@
+{
+    "display":  {
+                    "icon":  {
+                                 "id":  "stellar_evolution:biomass"
+                             },
+                    "title":  {
+                                  "translate":  "advancement.stellar_evolution.industry.biomass.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancement.stellar_evolution.industry.biomass.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true
+                },
+    "parent":  "stellar_evolution:industry/crusher",
+    "criteria":  {
+                     "unlock":  {
+                                    "trigger":  "minecraft:inventory_changed",
+                                    "conditions":  {
+                                                       "items":  [
+                                                                     {
+                                                                         "items":  "stellar_evolution:biomass"
+                                                                     }
+                                                                 ]
+                                                   }
+                                }
+                 }
+}

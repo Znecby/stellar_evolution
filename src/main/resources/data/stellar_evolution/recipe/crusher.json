@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": "stellar_evolution:steel_plate",
+    "F": "stellar_evolution:copper_frame",
+    "G": "stellar_evolution:steel_gear",
+    "P": "stellar_evolution:piston_assembly"
+  },
+  "pattern": [
+    "SFS",
+    "SGS",
+    "SPS"
+  ],
+  "result": {
+    "id": "stellar_evolution:crusher"
+  }
+}

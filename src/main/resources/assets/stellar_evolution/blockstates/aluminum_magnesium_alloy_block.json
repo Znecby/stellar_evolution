@@ -1,0 +1,5 @@
+﻿{
+    "variants": {
+        "": { "model": "stellar_evolution:block/aluminum_magnesium_alloy_block" }
+    }
+}

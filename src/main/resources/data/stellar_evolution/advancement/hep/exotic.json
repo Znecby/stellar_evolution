@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "id": "stellar_evolution:exotic_matter"
+    },
+    "title": {
+      "translate": "advancement.stellar_evolution.hep.exotic.title"
+    },
+    "description": {
+      "translate": "advancement.stellar_evolution.hep.exotic.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "stellar_evolution:hep/first_beam",
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "stellar_evolution:exotic_matter"
+          }
+        ]
+      }
+    }
+  }
+}

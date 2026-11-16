@@ -1,0 +1,30 @@
+{
+    "parent":  "minecraft:block/block",
+    "textures":  {
+                     "metal":  "stellar_evolution:block/tungsten_copper_hard_alloy_block",
+                     "particle":  "stellar_evolution:block/tungsten_copper_hard_alloy_block"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      0.02,
+                                      0,
+                                      4
+                                  ],
+                         "to":  [
+                                    4,
+                                    16,
+                                    12
+                                ],
+                         "faces":  {
+                                       "west":  {
+                                                    "texture":  "#metal",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#metal"
+                                                }
+                                   }
+                     }
+                 ]
+}

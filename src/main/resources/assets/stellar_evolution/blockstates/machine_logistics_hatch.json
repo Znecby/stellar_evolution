@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "casing=stainless,facing=north": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch" },
+        "casing=stainless,facing=east": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch", "y": 90 },
+        "casing=stainless,facing=south": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch", "y": 180 },
+        "casing=stainless,facing=west": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch", "y": 270 },
+        "casing=stainless,facing=up": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch", "x": 270 },
+        "casing=stainless,facing=down": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch", "x": 90 },
+        "casing=bricks,facing=north": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch_bricks" },
+        "casing=bricks,facing=east": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch_bricks", "y": 90 },
+        "casing=bricks,facing=south": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch_bricks", "y": 180 },
+        "casing=bricks,facing=west": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch_bricks", "y": 270 },
+        "casing=bricks,facing=up": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch_bricks", "x": 270 },
+        "casing=bricks,facing=down": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch_bricks", "x": 90 },
+        "casing=high_load,facing=north": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch_high_load" },
+        "casing=high_load,facing=east": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch_high_load", "y": 90 },
+        "casing=high_load,facing=south": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch_high_load", "y": 180 },
+        "casing=high_load,facing=west": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch_high_load", "y": 270 },
+        "casing=high_load,facing=up": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch_high_load", "x": 270 },
+        "casing=high_load,facing=down": { "model": "stellar_evolution:block/hatch/machine_logistics_hatch_high_load", "x": 90 }
+    }
+}

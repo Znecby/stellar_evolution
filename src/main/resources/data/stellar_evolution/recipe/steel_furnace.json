@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": "stellar_evolution:steel_plate",
+    "B": "minecraft:blast_furnace",
+    "R": "stellar_evolution:copper_rod",
+    "F": "stellar_evolution:copper_frame"
+  },
+  "pattern": [
+    "SSS",
+    "SBS",
+    "RFR"
+  ],
+  "result": {
+    "id": "stellar_evolution:steel_furnace"
+  }
+}

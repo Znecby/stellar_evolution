@@ -1,0 +1,7 @@
+﻿{
+  "type": "minecraft:stonecutting",
+  "ingredient": "stellar_evolution:lead_ingot",
+  "result": {
+    "id": "stellar_evolution:lead_plate"
+  }
+}

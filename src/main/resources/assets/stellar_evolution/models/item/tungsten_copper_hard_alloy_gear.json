@@ -1,0 +1,6 @@
+﻿{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "stellar_evolution:item/tungsten_copper_hard_alloy_gear"
+    }
+}

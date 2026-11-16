@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "stellar_evolution:bearing",
+    "H": "stellar_evolution:high_frequency_coil",
+    "G": "stellar_evolution:copper_gear",
+    "P": "stellar_evolution:copper_plate"
+  },
+  "pattern": [
+    "BH",
+    "GP"
+  ],
+  "result": {
+    "id": "stellar_evolution:servo"
+  }
+}

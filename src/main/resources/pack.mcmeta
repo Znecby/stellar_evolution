@@ -1,0 +1,7 @@
+{
+  "pack": {
+    "description": "恒星演变 Stellar Evolution — 工业科技向（机器 / 能源 / 管道）",
+    "min_format": [101, 1],
+    "max_format": [101, 1]
+  }
+}

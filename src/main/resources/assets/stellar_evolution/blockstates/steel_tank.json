@@ -1,0 +1,200 @@
+{
+    "multipart":  [
+                      {
+                          "when":  {
+                                       "bottom":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/cap_bottom"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "top":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/cap_top"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "north":  "false",
+                                       "west":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/post_nw"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "north":  "false",
+                                       "west":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/post_nw"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "north":  "true",
+                                       "west":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/post_nw"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "north":  "false",
+                                       "east":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/post_ne"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "north":  "false",
+                                       "east":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/post_ne"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "north":  "true",
+                                       "east":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/post_ne"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "south":  "false",
+                                       "east":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/post_se"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "south":  "false",
+                                       "east":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/post_se"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "south":  "true",
+                                       "east":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/post_se"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "south":  "false",
+                                       "west":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/post_sw"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "south":  "false",
+                                       "west":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/post_sw"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "south":  "true",
+                                       "west":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/post_sw"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "north":  "false",
+                                       "window":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/wall_north_glass"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "north":  "false",
+                                       "window":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/wall_north_solid"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "east":  "false",
+                                       "window":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/wall_east_glass"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "east":  "false",
+                                       "window":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/wall_east_solid"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "south":  "false",
+                                       "window":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/wall_south_glass"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "south":  "false",
+                                       "window":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/wall_south_solid"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "west":  "false",
+                                       "window":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/wall_west_glass"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "west":  "false",
+                                       "window":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/steel_tank/wall_west_solid"
+                                    }
+                      }
+                  ]
+}

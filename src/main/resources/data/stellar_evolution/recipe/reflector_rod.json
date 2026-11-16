@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "stellar_evolution:steel_plate",
+    "T": "stellar_evolution:zircaloy_tube",
+    "N": "minecraft:netherite_block"
+  },
+  "pattern": [
+    "PTP",
+    "PNP",
+    " T "
+  ],
+  "result": {
+    "id": "stellar_evolution:reflector_rod"
+  }
+}

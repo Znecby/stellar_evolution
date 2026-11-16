@@ -1,0 +1,5 @@
+﻿{
+    "variants": {
+        "": { "model": "stellar_evolution:block/tungsten_copper_hard_alloy_block" }
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": "stellar_evolution:tungsten_plate",
+    "A": "minecraft:polished_andesite",
+    "C": "stellar_evolution:copper_pipe"
+  },
+  "pattern": [
+    "TCT",
+    "CAC"
+  ],
+  "result": {
+    "count": 4,
+    "id": "stellar_evolution:beam_pipe"
+  }
+}

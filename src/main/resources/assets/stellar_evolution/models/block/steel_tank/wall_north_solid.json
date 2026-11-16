@@ -1,0 +1,30 @@
+{
+    "parent":  "minecraft:block/block",
+    "textures":  {
+                     "metal":  "stellar_evolution:block/steel_block",
+                     "particle":  "stellar_evolution:block/steel_block"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      4,
+                                      0,
+                                      0.02
+                                  ],
+                         "to":  [
+                                    12,
+                                    16,
+                                    4
+                                ],
+                         "faces":  {
+                                       "north":  {
+                                                     "texture":  "#metal",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#metal"
+                                                 }
+                                   }
+                     }
+                 ]
+}

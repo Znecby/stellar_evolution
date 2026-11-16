@@ -1,0 +1,7 @@
+﻿{
+    "type": "minecraft:stonecutting",
+    "ingredient": "stellar_evolution:high_speed_steel_ingot",
+    "result": {
+        "id": "stellar_evolution:high_speed_steel_plate"
+    }
+}

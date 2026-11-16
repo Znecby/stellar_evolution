@@ -1,0 +1,3015 @@
+{
+    "parent":  "minecraft:block/block",
+    "ambientocclusion":  false,
+    "textures":  {
+                     "neth":  "minecraft:block/netherite_block",
+                     "dTile":  "minecraft:block/deepslate_tiles",
+                     "white":  "minecraft:block/white_concrete",
+                     "gray":  "minecraft:block/light_gray_concrete",
+                     "iron":  "minecraft:block/iron_block",
+                     "grate":  "minecraft:block/copper_grate",
+                     "glass":  "minecraft:block/glass",
+                     "quartz":  "minecraft:block/quartz_block_top",
+                     "lamp":  "minecraft:block/sea_lantern",
+                     "dark":  "minecraft:block/polished_blackstone",
+                     "board":  "minecraft:block/green_concrete",
+                     "light":  "minecraft:block/redstone_block",
+                     "lime":  "minecraft:block/lime_concrete",
+                     "cuOx":  "minecraft:block/exposed_copper",
+                     "particle":  "minecraft:block/netherite_block"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      0,
+                                      0,
+                                      0
+                                  ],
+                         "to":  [
+                                    2.5,
+                                    32,
+                                    2.5
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               6.75,
+                                                               9.25,
+                                                               9.25
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             6.75,
+                                                             6.75,
+                                                             9.25,
+                                                             9.25
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                0,
+                                                                9.25,
+                                                                16
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                0,
+                                                                9.25,
+                                                                16
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               0,
+                                                               9.25,
+                                                               16
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               0,
+                                                               9.25,
+                                                               16
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      29.49863,
+                                      -0.00137,
+                                      -0.00137
+                                  ],
+                         "to":  [
+                                    31.99863,
+                                    31.99863,
+                                    2.49863
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               6.75,
+                                                               9.25,
+                                                               9.25
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             6.75,
+                                                             6.75,
+                                                             9.25,
+                                                             9.25
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                0,
+                                                                9.25,
+                                                                16
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                0,
+                                                                9.25,
+                                                                16
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               0,
+                                                               9.25,
+                                                               16
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               0,
+                                                               9.25,
+                                                               16
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      -0.00274,
+                                      -0.00274,
+                                      29.49726
+                                  ],
+                         "to":  [
+                                    2.49726,
+                                    31.99726,
+                                    31.99726
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               6.75,
+                                                               9.25,
+                                                               9.25
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             6.75,
+                                                             6.75,
+                                                             9.25,
+                                                             9.25
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                0,
+                                                                9.25,
+                                                                16
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                0,
+                                                                9.25,
+                                                                16
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               0,
+                                                               9.25,
+                                                               16
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               0,
+                                                               9.25,
+                                                               16
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      29.49589,
+                                      -0.00411,
+                                      29.49589
+                                  ],
+                         "to":  [
+                                    31.99589,
+                                    31.99589,
+                                    31.99589
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               6.75,
+                                                               9.25,
+                                                               9.25
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             6.75,
+                                                             6.75,
+                                                             9.25,
+                                                             9.25
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                0,
+                                                                9.25,
+                                                                16
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                0,
+                                                                9.25,
+                                                                16
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               0,
+                                                               9.25,
+                                                               16
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               0,
+                                                               9.25,
+                                                               16
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      2.49452,
+                                      -0.00548,
+                                      -0.00548
+                                  ],
+                         "to":  [
+                                    29.49452,
+                                    1.99452,
+                                    2.49452
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               6.75,
+                                                               16,
+                                                               9.25
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             0,
+                                                             6.75,
+                                                             16,
+                                                             9.25
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                0,
+                                                                7,
+                                                                16,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                0,
+                                                                7,
+                                                                16,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               7,
+                                                               9.25,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               7,
+                                                               9.25,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      2.49315,
+                                      -0.0068499999999999993,
+                                      29.49315
+                                  ],
+                         "to":  [
+                                    29.49315,
+                                    1.99315,
+                                    31.99315
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               6.75,
+                                                               16,
+                                                               9.25
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             0,
+                                                             6.75,
+                                                             16,
+                                                             9.25
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                0,
+                                                                7,
+                                                                16,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                0,
+                                                                7,
+                                                                16,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               7,
+                                                               9.25,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               7,
+                                                               9.25,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      -0.00822,
+                                      -0.00822,
+                                      2.49178
+                                  ],
+                         "to":  [
+                                    2.49178,
+                                    1.99178,
+                                    29.49178
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               0,
+                                                               9.25,
+                                                               16
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             6.75,
+                                                             0,
+                                                             9.25,
+                                                             16
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                7,
+                                                                9.25,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                7,
+                                                                9.25,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               7,
+                                                               16,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               7,
+                                                               16,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      29.49041,
+                                      -0.00959,
+                                      2.49041
+                                  ],
+                         "to":  [
+                                    31.99041,
+                                    1.99041,
+                                    29.49041
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               0,
+                                                               9.25,
+                                                               16
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             6.75,
+                                                             0,
+                                                             9.25,
+                                                             16
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                7,
+                                                                9.25,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                7,
+                                                                9.25,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               7,
+                                                               16,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               7,
+                                                               16,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      2.48904,
+                                      29.98904,
+                                      -0.01096
+                                  ],
+                         "to":  [
+                                    29.48904,
+                                    31.98904,
+                                    2.48904
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               6.75,
+                                                               16,
+                                                               9.25
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             0,
+                                                             6.75,
+                                                             16,
+                                                             9.25
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                0,
+                                                                7,
+                                                                16,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                0,
+                                                                7,
+                                                                16,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               7,
+                                                               9.25,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               7,
+                                                               9.25,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      2.48767,
+                                      29.98767,
+                                      29.48767
+                                  ],
+                         "to":  [
+                                    29.48767,
+                                    31.98767,
+                                    31.98767
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               6.75,
+                                                               16,
+                                                               9.25
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             0,
+                                                             6.75,
+                                                             16,
+                                                             9.25
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                0,
+                                                                7,
+                                                                16,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                0,
+                                                                7,
+                                                                16,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               7,
+                                                               9.25,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               7,
+                                                               9.25,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      -0.013699999999999999,
+                                      29.9863,
+                                      2.4863
+                                  ],
+                         "to":  [
+                                    2.4863,
+                                    31.9863,
+                                    29.4863
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               0,
+                                                               9.25,
+                                                               16
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             6.75,
+                                                             0,
+                                                             9.25,
+                                                             16
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                7,
+                                                                9.25,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                7,
+                                                                9.25,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               7,
+                                                               16,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               7,
+                                                               16,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      29.48493,
+                                      29.98493,
+                                      2.48493
+                                  ],
+                         "to":  [
+                                    31.98493,
+                                    31.98493,
+                                    29.48493
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.75,
+                                                               0,
+                                                               9.25,
+                                                               16
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             6.75,
+                                                             0,
+                                                             9.25,
+                                                             16
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                7,
+                                                                9.25,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.75,
+                                                                7,
+                                                                9.25,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               7,
+                                                               16,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               7,
+                                                               16,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.98356,
+                                      2.1835600000000004,
+                                      3.98356
+                                  ],
+                         "to":  [
+                                    27.98356,
+                                    4.18356,
+                                    27.98356
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#dTile",
+                                                    "uv":  [
+                                                               0,
+                                                               0,
+                                                               16,
+                                                               16
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#dTile",
+                                                  "uv":  [
+                                                             0,
+                                                             0,
+                                                             16,
+                                                             16
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#dTile",
+                                                     "uv":  [
+                                                                0,
+                                                                7,
+                                                                16,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#dTile",
+                                                     "uv":  [
+                                                                0,
+                                                                7,
+                                                                16,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#dTile",
+                                                    "uv":  [
+                                                               0,
+                                                               7,
+                                                               16,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#dTile",
+                                                    "uv":  [
+                                                               0,
+                                                               7,
+                                                               16,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      5.58219,
+                                      4.18219,
+                                      5.58219
+                                  ],
+                         "to":  [
+                                    26.382189999999998,
+                                    25.98219,
+                                    26.382189999999998
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#white",
+                                                    "uv":  [
+                                                               0,
+                                                               0,
+                                                               16,
+                                                               16
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#white",
+                                                  "uv":  [
+                                                             0,
+                                                             0,
+                                                             16,
+                                                             16
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#white",
+                                                     "uv":  [
+                                                                0,
+                                                                0,
+                                                                16,
+                                                                16
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#white",
+                                                     "uv":  [
+                                                                0,
+                                                                0,
+                                                                16,
+                                                                16
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#white",
+                                                    "uv":  [
+                                                               0,
+                                                               0,
+                                                               16,
+                                                               16
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#white",
+                                                    "uv":  [
+                                                               0,
+                                                               0,
+                                                               16,
+                                                               16
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      5.18082,
+                                      7.5808199999999992,
+                                      5.18082
+                                  ],
+                         "to":  [
+                                    26.780820000000002,
+                                    9.38082,
+                                    26.780820000000002
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               0,
+                                                               16,
+                                                               16
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             0,
+                                                             0,
+                                                             16,
+                                                             16
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                0,
+                                                                7.1,
+                                                                16,
+                                                                8.9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                0,
+                                                                7.1,
+                                                                16,
+                                                                8.9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               7.1,
+                                                               16,
+                                                               8.9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               7.1,
+                                                               16,
+                                                               8.9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      5.17945,
+                                      20.57945,
+                                      5.17945
+                                  ],
+                         "to":  [
+                                    26.77945,
+                                    22.37945,
+                                    26.77945
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               0,
+                                                               16,
+                                                               16
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             0,
+                                                             0,
+                                                             16,
+                                                             16
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                0,
+                                                                7.1000000000000014,
+                                                                16,
+                                                                8.8999999999999986
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                0,
+                                                                7.1000000000000014,
+                                                                16,
+                                                                8.8999999999999986
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               7.1000000000000014,
+                                                               16,
+                                                               8.8999999999999986
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               0,
+                                                               7.1000000000000014,
+                                                               16,
+                                                               8.8999999999999986
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      6.3780800000000006,
+                                      25.97808,
+                                      6.3780800000000006
+                                  ],
+                         "to":  [
+                                    25.57808,
+                                    27.57808,
+                                    25.57808
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#gray",
+                                                    "uv":  [
+                                                               0,
+                                                               0,
+                                                               16,
+                                                               16
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#gray",
+                                                  "uv":  [
+                                                             0,
+                                                             0,
+                                                             16,
+                                                             16
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#gray",
+                                                     "uv":  [
+                                                                0,
+                                                                7.1999999999999993,
+                                                                16,
+                                                                8.8
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#gray",
+                                                     "uv":  [
+                                                                0,
+                                                                7.1999999999999993,
+                                                                16,
+                                                                8.8
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#gray",
+                                                    "uv":  [
+                                                               0,
+                                                               7.1999999999999993,
+                                                               16,
+                                                               8.8
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#gray",
+                                                    "uv":  [
+                                                               0,
+                                                               7.1999999999999993,
+                                                               16,
+                                                               8.8
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.776710000000001,
+                                      27.576710000000002,
+                                      12.776710000000001
+                                  ],
+                         "to":  [
+                                    19.17671,
+                                    29.576710000000002,
+                                    19.17671
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#iron",
+                                                    "uv":  [
+                                                               4.8000000000000007,
+                                                               4.8000000000000007,
+                                                               11.2,
+                                                               11.2
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#iron",
+                                                  "uv":  [
+                                                             4.8000000000000007,
+                                                             4.8000000000000007,
+                                                             11.2,
+                                                             11.2
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#iron",
+                                                     "uv":  [
+                                                                4.8000000000000007,
+                                                                7,
+                                                                11.2,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#iron",
+                                                     "uv":  [
+                                                                4.8000000000000007,
+                                                                7,
+                                                                11.2,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#iron",
+                                                    "uv":  [
+                                                               4.8000000000000007,
+                                                               7,
+                                                               11.2,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#iron",
+                                                    "uv":  [
+                                                               4.8000000000000007,
+                                                               7,
+                                                               11.2,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.175339999999998,
+                                      29.57534,
+                                      12.175339999999998
+                                  ],
+                         "to":  [
+                                    19.77534,
+                                    30.57534,
+                                    19.77534
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.1999999999999993,
+                                                               4.1999999999999993,
+                                                               11.8,
+                                                               11.8
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             4.1999999999999993,
+                                                             4.1999999999999993,
+                                                             11.8,
+                                                             11.8
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                4.1999999999999993,
+                                                                7.5,
+                                                                11.8,
+                                                                8.5
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                4.1999999999999993,
+                                                                7.5,
+                                                                11.8,
+                                                                8.5
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.1999999999999993,
+                                                               7.5,
+                                                               11.8,
+                                                               8.5
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.1999999999999993,
+                                                               7.5,
+                                                               11.8,
+                                                               8.5
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      13.97397,
+                                      27.573970000000003,
+                                      20.37397
+                                  ],
+                         "to":  [
+                                    19.37397,
+                                    27.97397,
+                                    21.37397
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#grate",
+                                                    "uv":  [
+                                                               5.3000000000000007,
+                                                               7.5,
+                                                               10.7,
+                                                               8.5
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#grate",
+                                                  "uv":  [
+                                                             5.3000000000000007,
+                                                             7.5,
+                                                             10.7,
+                                                             8.5
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#grate",
+                                                     "uv":  [
+                                                                5.3000000000000007,
+                                                                7.8000000000000007,
+                                                                10.7,
+                                                                8.2
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#grate",
+                                                     "uv":  [
+                                                                5.3000000000000007,
+                                                                7.8000000000000007,
+                                                                10.7,
+                                                                8.2
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#grate",
+                                                    "uv":  [
+                                                               7.5,
+                                                               7.8000000000000007,
+                                                               8.5,
+                                                               8.2
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#grate",
+                                                    "uv":  [
+                                                               7.5,
+                                                               7.8000000000000007,
+                                                               8.5,
+                                                               8.2
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      11.1726,
+                                      9.7726,
+                                      4.1726
+                                  ],
+                         "to":  [
+                                    20.7726,
+                                    18.5726,
+                                    5.7726
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               3.1999999999999993,
+                                                               7.2,
+                                                               12.8,
+                                                               8.8
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             3.1999999999999993,
+                                                             7.2,
+                                                             12.8,
+                                                             8.8
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                3.1999999999999993,
+                                                                3.5999999999999996,
+                                                                12.8,
+                                                                12.4
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                3.1999999999999993,
+                                                                3.5999999999999996,
+                                                                12.8,
+                                                                12.4
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               7.2,
+                                                               3.5999999999999996,
+                                                               8.8,
+                                                               12.4
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               7.2,
+                                                               3.5999999999999996,
+                                                               8.8,
+                                                               12.4
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      11.771230000000001,
+                                      10.37123,
+                                      3.8712299999999997
+                                  ],
+                         "to":  [
+                                    20.171229999999998,
+                                    17.97123,
+                                    4.57123
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#glass",
+                                                    "uv":  [
+                                                               3.8000000000000007,
+                                                               7.65,
+                                                               12.2,
+                                                               8.35
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#glass",
+                                                  "uv":  [
+                                                             3.8000000000000007,
+                                                             7.65,
+                                                             12.2,
+                                                             8.35
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#glass",
+                                                     "uv":  [
+                                                                3.8000000000000007,
+                                                                4.2,
+                                                                12.2,
+                                                                11.8
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#glass",
+                                                     "uv":  [
+                                                                3.8000000000000007,
+                                                                4.2,
+                                                                12.2,
+                                                                11.8
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#glass",
+                                                    "uv":  [
+                                                               7.65,
+                                                               4.2,
+                                                               8.35,
+                                                               11.8
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#glass",
+                                                    "uv":  [
+                                                               7.65,
+                                                               4.2,
+                                                               8.35,
+                                                               11.8
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.96986,
+                                      11.56986,
+                                      3.36986
+                                  ],
+                         "to":  [
+                                    18.96986,
+                                    16.76986,
+                                    4.16986
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#quartz",
+                                                    "uv":  [
+                                                               5,
+                                                               7.6,
+                                                               11,
+                                                               8.4
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#quartz",
+                                                  "uv":  [
+                                                             5,
+                                                             7.6,
+                                                             11,
+                                                             8.4
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#quartz",
+                                                     "uv":  [
+                                                                5,
+                                                                5.3999999999999995,
+                                                                11,
+                                                                10.600000000000001
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#quartz",
+                                                     "uv":  [
+                                                                5,
+                                                                5.3999999999999995,
+                                                                11,
+                                                                10.600000000000001
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#quartz",
+                                                    "uv":  [
+                                                               7.6,
+                                                               5.3999999999999995,
+                                                               8.4,
+                                                               10.600000000000001
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#quartz",
+                                                    "uv":  [
+                                                               7.6,
+                                                               5.3999999999999995,
+                                                               8.4,
+                                                               10.600000000000001
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      15.168489999999998,
+                                      13.168489999999998,
+                                      3.06849
+                                  ],
+                         "to":  [
+                                    16.76849,
+                                    15.168489999999998,
+                                    3.56849
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#lamp",
+                                                    "uv":  [
+                                                               7.1999999999999993,
+                                                               7.75,
+                                                               8.8,
+                                                               8.25
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#lamp",
+                                                  "uv":  [
+                                                             7.1999999999999993,
+                                                             7.75,
+                                                             8.8,
+                                                             8.25
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#lamp",
+                                                     "uv":  [
+                                                                7.1999999999999993,
+                                                                7,
+                                                                8.8,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#lamp",
+                                                     "uv":  [
+                                                                7.1999999999999993,
+                                                                7,
+                                                                8.8,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#lamp",
+                                                    "uv":  [
+                                                               7.75,
+                                                               7,
+                                                               8.25,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#lamp",
+                                                    "uv":  [
+                                                               7.75,
+                                                               7,
+                                                               8.25,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      2.56712,
+                                      11.36712,
+                                      13.36712
+                                  ],
+                         "to":  [
+                                    5.96712,
+                                    14.56712,
+                                    18.567120000000003
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#iron",
+                                                    "uv":  [
+                                                               6.3,
+                                                               5.3999999999999995,
+                                                               9.7,
+                                                               10.600000000000001
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#iron",
+                                                  "uv":  [
+                                                             6.3,
+                                                             5.3999999999999995,
+                                                             9.7,
+                                                             10.600000000000001
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#iron",
+                                                     "uv":  [
+                                                                6.3,
+                                                                6.4,
+                                                                9.7,
+                                                                9.6
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#iron",
+                                                     "uv":  [
+                                                                6.3,
+                                                                6.4,
+                                                                9.7,
+                                                                9.6
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#iron",
+                                                    "uv":  [
+                                                               5.3999999999999995,
+                                                               6.4,
+                                                               10.600000000000001,
+                                                               9.6
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#iron",
+                                                    "uv":  [
+                                                               5.3999999999999995,
+                                                               6.4,
+                                                               10.600000000000001,
+                                                               9.6
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      2.16575,
+                                      11.96575,
+                                      13.96575
+                                  ],
+                         "to":  [
+                                    2.7657499999999997,
+                                    13.96575,
+                                    17.96575
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#lamp",
+                                                    "uv":  [
+                                                               7.7,
+                                                               6,
+                                                               8.3,
+                                                               10
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#lamp",
+                                                  "uv":  [
+                                                             7.7,
+                                                             6,
+                                                             8.3,
+                                                             10
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#lamp",
+                                                     "uv":  [
+                                                                7.7,
+                                                                7,
+                                                                8.3,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#lamp",
+                                                     "uv":  [
+                                                                7.7,
+                                                                7,
+                                                                8.3,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#lamp",
+                                                    "uv":  [
+                                                               6,
+                                                               7,
+                                                               10,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#lamp",
+                                                    "uv":  [
+                                                               6,
+                                                               7,
+                                                               10,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      13.16438,
+                                      4.56438,
+                                      12.764380000000001
+                                  ],
+                         "to":  [
+                                    18.76438,
+                                    23.96438,
+                                    19.164379999999998
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#dark",
+                                                    "uv":  [
+                                                               5.1999999999999993,
+                                                               4.8000000000000007,
+                                                               10.8,
+                                                               11.2
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#dark",
+                                                  "uv":  [
+                                                             5.1999999999999993,
+                                                             4.8000000000000007,
+                                                             10.8,
+                                                             11.2
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#dark",
+                                                     "uv":  [
+                                                                5.1999999999999993,
+                                                                0,
+                                                                10.8,
+                                                                16
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#dark",
+                                                     "uv":  [
+                                                                5.1999999999999993,
+                                                                0,
+                                                                10.8,
+                                                                16
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#dark",
+                                                    "uv":  [
+                                                               4.8000000000000007,
+                                                               0,
+                                                               11.2,
+                                                               16
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#dark",
+                                                    "uv":  [
+                                                               4.8000000000000007,
+                                                               0,
+                                                               11.2,
+                                                               16
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.96301,
+                                      11.96301,
+                                      13.763010000000001
+                                  ],
+                         "to":  [
+                                    18.96301,
+                                    19.96301,
+                                    14.363010000000001
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#glass",
+                                                    "uv":  [
+                                                               5,
+                                                               7.7,
+                                                               11,
+                                                               8.3
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#glass",
+                                                  "uv":  [
+                                                             5,
+                                                             7.7,
+                                                             11,
+                                                             8.3
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#glass",
+                                                     "uv":  [
+                                                                5,
+                                                                4,
+                                                                11,
+                                                                12
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#glass",
+                                                     "uv":  [
+                                                                5,
+                                                                4,
+                                                                11,
+                                                                12
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#glass",
+                                                    "uv":  [
+                                                               7.7,
+                                                               4,
+                                                               8.3,
+                                                               12
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#glass",
+                                                    "uv":  [
+                                                               7.7,
+                                                               4,
+                                                               8.3,
+                                                               12
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      6.96164,
+                                      9.96164,
+                                      5.16164
+                                  ],
+                         "to":  [
+                                    11.561639999999999,
+                                    17.96164,
+                                    6.16164
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#dark",
+                                                    "uv":  [
+                                                               5.7,
+                                                               7.5,
+                                                               10.3,
+                                                               8.5
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#dark",
+                                                  "uv":  [
+                                                             5.7,
+                                                             7.5,
+                                                             10.3,
+                                                             8.5
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#dark",
+                                                     "uv":  [
+                                                                5.7,
+                                                                4,
+                                                                10.3,
+                                                                12
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#dark",
+                                                     "uv":  [
+                                                                5.7,
+                                                                4,
+                                                                10.3,
+                                                                12
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#dark",
+                                                    "uv":  [
+                                                               7.5,
+                                                               4,
+                                                               8.5,
+                                                               12
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#dark",
+                                                    "uv":  [
+                                                               7.5,
+                                                               4,
+                                                               8.5,
+                                                               12
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      6.76027,
+                                      10.56027,
+                                      4.96027
+                                  ],
+                         "to":  [
+                                    11.76027,
+                                    17.36027,
+                                    5.26027
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#board",
+                                                    "uv":  [
+                                                               5.5,
+                                                               7.85,
+                                                               10.5,
+                                                               8.1499999999999986
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#board",
+                                                  "uv":  [
+                                                             5.5,
+                                                             7.85,
+                                                             10.5,
+                                                             8.1499999999999986
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#board",
+                                                     "uv":  [
+                                                                5.5,
+                                                                4.6000000000000005,
+                                                                10.5,
+                                                                11.399999999999999
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#board",
+                                                     "uv":  [
+                                                                5.5,
+                                                                4.6000000000000005,
+                                                                10.5,
+                                                                11.399999999999999
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#board",
+                                                    "uv":  [
+                                                               7.85,
+                                                               4.6000000000000005,
+                                                               8.1499999999999986,
+                                                               11.399999999999999
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#board",
+                                                    "uv":  [
+                                                               7.85,
+                                                               4.6000000000000005,
+                                                               8.1499999999999986,
+                                                               11.399999999999999
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      7.3589,
+                                      11.9589,
+                                      4.8589
+                                  ],
+                         "to":  [
+                                    10.5589,
+                                    15.9589,
+                                    5.1089
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#quartz",
+                                                    "uv":  [
+                                                               6.4,
+                                                               7.875,
+                                                               9.6,
+                                                               8.125
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#quartz",
+                                                  "uv":  [
+                                                             6.4,
+                                                             7.875,
+                                                             9.6,
+                                                             8.125
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#quartz",
+                                                     "uv":  [
+                                                                6.4,
+                                                                6,
+                                                                9.6,
+                                                                10
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#quartz",
+                                                     "uv":  [
+                                                                6.4,
+                                                                6,
+                                                                9.6,
+                                                                10
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#quartz",
+                                                    "uv":  [
+                                                               7.875,
+                                                               6,
+                                                               8.125,
+                                                               10
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#quartz",
+                                                    "uv":  [
+                                                               7.875,
+                                                               6,
+                                                               8.125,
+                                                               10
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      7.55753,
+                                      16.55753,
+                                      4.80753
+                                  ],
+                         "to":  [
+                                    8.55753,
+                                    17.357529999999997,
+                                    5.05753
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#light",
+                                                    "uv":  [
+                                                               7.5,
+                                                               7.875,
+                                                               8.5,
+                                                               8.125
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#light",
+                                                  "uv":  [
+                                                             7.5,
+                                                             7.875,
+                                                             8.5,
+                                                             8.125
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#light",
+                                                     "uv":  [
+                                                                7.5,
+                                                                7.6000000000000014,
+                                                                8.5,
+                                                                8.3999999999999986
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#light",
+                                                     "uv":  [
+                                                                7.5,
+                                                                7.6000000000000014,
+                                                                8.5,
+                                                                8.3999999999999986
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#light",
+                                                    "uv":  [
+                                                               7.875,
+                                                               7.6000000000000014,
+                                                               8.125,
+                                                               8.3999999999999986
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#light",
+                                                    "uv":  [
+                                                               7.875,
+                                                               7.6000000000000014,
+                                                               8.125,
+                                                               8.3999999999999986
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      9.3561600000000009,
+                                      16.556160000000002,
+                                      4.8061599999999993
+                                  ],
+                         "to":  [
+                                    10.356160000000001,
+                                    17.35616,
+                                    5.0561599999999993
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#lime",
+                                                    "uv":  [
+                                                               7.5,
+                                                               7.875,
+                                                               8.5,
+                                                               8.125
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#lime",
+                                                  "uv":  [
+                                                             7.5,
+                                                             7.875,
+                                                             8.5,
+                                                             8.125
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#lime",
+                                                     "uv":  [
+                                                                7.5,
+                                                                7.6000000000000014,
+                                                                8.5,
+                                                                8.3999999999999986
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#lime",
+                                                     "uv":  [
+                                                                7.5,
+                                                                7.6000000000000014,
+                                                                8.5,
+                                                                8.3999999999999986
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#lime",
+                                                    "uv":  [
+                                                               7.875,
+                                                               7.6000000000000014,
+                                                               8.125,
+                                                               8.3999999999999986
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#lime",
+                                                    "uv":  [
+                                                               7.875,
+                                                               7.6000000000000014,
+                                                               8.125,
+                                                               8.3999999999999986
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      26.354789999999998,
+                                      5.95479,
+                                      9.5547899999999988
+                                  ],
+                         "to":  [
+                                    27.75479,
+                                    21.95479,
+                                    11.554789999999999
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#cuOx",
+                                                    "uv":  [
+                                                               7.2999999999999989,
+                                                               7,
+                                                               8.7000000000000011,
+                                                               9
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#cuOx",
+                                                  "uv":  [
+                                                             7.2999999999999989,
+                                                             7,
+                                                             8.7000000000000011,
+                                                             9
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#cuOx",
+                                                     "uv":  [
+                                                                7.2999999999999989,
+                                                                0,
+                                                                8.7000000000000011,
+                                                                16
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#cuOx",
+                                                     "uv":  [
+                                                                7.2999999999999989,
+                                                                0,
+                                                                8.7000000000000011,
+                                                                16
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#cuOx",
+                                                    "uv":  [
+                                                               7,
+                                                               0,
+                                                               9,
+                                                               16
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#cuOx",
+                                                    "uv":  [
+                                                               7,
+                                                               0,
+                                                               9,
+                                                               16
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      26.35342,
+                                      5.95342,
+                                      20.35342
+                                  ],
+                         "to":  [
+                                    27.753420000000002,
+                                    21.95342,
+                                    22.35342
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#cuOx",
+                                                    "uv":  [
+                                                               7.2999999999999989,
+                                                               7,
+                                                               8.7000000000000011,
+                                                               9
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#cuOx",
+                                                  "uv":  [
+                                                             7.2999999999999989,
+                                                             7,
+                                                             8.7000000000000011,
+                                                             9
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#cuOx",
+                                                     "uv":  [
+                                                                7.2999999999999989,
+                                                                0,
+                                                                8.7000000000000011,
+                                                                16
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#cuOx",
+                                                     "uv":  [
+                                                                7.2999999999999989,
+                                                                0,
+                                                                8.7000000000000011,
+                                                                16
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#cuOx",
+                                                    "uv":  [
+                                                               7,
+                                                               0,
+                                                               9,
+                                                               16
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#cuOx",
+                                                    "uv":  [
+                                                               7,
+                                                               0,
+                                                               9,
+                                                               16
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      25.75205,
+                                      21.95205,
+                                      8.95205
+                                  ],
+                         "to":  [
+                                    28.15205,
+                                    24.35205,
+                                    22.95205
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6.8000000000000007,
+                                                               1,
+                                                               9.2,
+                                                               15
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             6.8000000000000007,
+                                                             1,
+                                                             9.2,
+                                                             15
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.8000000000000007,
+                                                                6.8000000000000007,
+                                                                9.2,
+                                                                9.2
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6.8000000000000007,
+                                                                6.8000000000000007,
+                                                                9.2,
+                                                                9.2
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               1,
+                                                               6.8000000000000007,
+                                                               15,
+                                                               9.2
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               1,
+                                                               6.8000000000000007,
+                                                               15,
+                                                               9.2
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      6.95068,
+                                      -0.049319999999999996,
+                                      0.45068
+                                  ],
+                         "to":  [
+                                    10.95068,
+                                    2.95068,
+                                    6.95068
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6,
+                                                               4.75,
+                                                               10,
+                                                               11.25
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             6,
+                                                             4.75,
+                                                             10,
+                                                             11.25
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6,
+                                                                6.5,
+                                                                10,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6,
+                                                                6.5,
+                                                                10,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.75,
+                                                               6.5,
+                                                               11.25,
+                                                               9.5
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.75,
+                                                               6.5,
+                                                               11.25,
+                                                               9.5
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      20.94931,
+                                      -0.05069,
+                                      0.44931
+                                  ],
+                         "to":  [
+                                    24.94931,
+                                    2.94931,
+                                    6.94931
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6,
+                                                               4.75,
+                                                               10,
+                                                               11.25
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             6,
+                                                             4.75,
+                                                             10,
+                                                             11.25
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6,
+                                                                6.5,
+                                                                10,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6,
+                                                                6.5,
+                                                                10,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.75,
+                                                               6.5,
+                                                               11.25,
+                                                               9.5
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.75,
+                                                               6.5,
+                                                               11.25,
+                                                               9.5
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      6.94794,
+                                      -0.052059999999999995,
+                                      24.94794
+                                  ],
+                         "to":  [
+                                    10.94794,
+                                    2.94794,
+                                    31.44794
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6,
+                                                               4.75,
+                                                               10,
+                                                               11.25
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             6,
+                                                             4.75,
+                                                             10,
+                                                             11.25
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6,
+                                                                6.5,
+                                                                10,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6,
+                                                                6.5,
+                                                                10,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.75,
+                                                               6.5,
+                                                               11.25,
+                                                               9.5
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.75,
+                                                               6.5,
+                                                               11.25,
+                                                               9.5
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      20.94657,
+                                      -0.05343,
+                                      24.94657
+                                  ],
+                         "to":  [
+                                    24.94657,
+                                    2.94657,
+                                    31.44657
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6,
+                                                               4.75,
+                                                               10,
+                                                               11.25
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             6,
+                                                             4.75,
+                                                             10,
+                                                             11.25
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6,
+                                                                6.5,
+                                                                10,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                6,
+                                                                6.5,
+                                                                10,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.75,
+                                                               6.5,
+                                                               11.25,
+                                                               9.5
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.75,
+                                                               6.5,
+                                                               11.25,
+                                                               9.5
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0.4452,
+                                      -0.054799999999999995,
+                                      6.9452
+                                  ],
+                         "to":  [
+                                    6.9452,
+                                    2.9452,
+                                    10.9452
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.75,
+                                                               6,
+                                                               11.25,
+                                                               10
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             4.75,
+                                                             6,
+                                                             11.25,
+                                                             10
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                4.75,
+                                                                6.5,
+                                                                11.25,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                4.75,
+                                                                6.5,
+                                                                11.25,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6,
+                                                               6.5,
+                                                               10,
+                                                               9.5
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6,
+                                                               6.5,
+                                                               10,
+                                                               9.5
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0.44383,
+                                      -0.05617,
+                                      20.94383
+                                  ],
+                         "to":  [
+                                    6.94383,
+                                    2.94383,
+                                    24.94383
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.75,
+                                                               6,
+                                                               11.25,
+                                                               10
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             4.75,
+                                                             6,
+                                                             11.25,
+                                                             10
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                4.75,
+                                                                6.5,
+                                                                11.25,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                4.75,
+                                                                6.5,
+                                                                11.25,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6,
+                                                               6.5,
+                                                               10,
+                                                               9.5
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6,
+                                                               6.5,
+                                                               10,
+                                                               9.5
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      24.94246,
+                                      -0.057539999999999994,
+                                      6.94246
+                                  ],
+                         "to":  [
+                                    31.44246,
+                                    2.94246,
+                                    10.94246
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.75,
+                                                               6,
+                                                               11.25,
+                                                               10
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             4.75,
+                                                             6,
+                                                             11.25,
+                                                             10
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                4.75,
+                                                                6.5,
+                                                                11.25,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                4.75,
+                                                                6.5,
+                                                                11.25,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6,
+                                                               6.5,
+                                                               10,
+                                                               9.5
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6,
+                                                               6.5,
+                                                               10,
+                                                               9.5
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      24.94109,
+                                      -0.05891,
+                                      20.94109
+                                  ],
+                         "to":  [
+                                    31.44109,
+                                    2.94109,
+                                    24.94109
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               4.75,
+                                                               6,
+                                                               11.25,
+                                                               10
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#neth",
+                                                  "uv":  [
+                                                             4.75,
+                                                             6,
+                                                             11.25,
+                                                             10
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                4.75,
+                                                                6.5,
+                                                                11.25,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#neth",
+                                                     "uv":  [
+                                                                4.75,
+                                                                6.5,
+                                                                11.25,
+                                                                9.5
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6,
+                                                               6.5,
+                                                               10,
+                                                               9.5
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#neth",
+                                                    "uv":  [
+                                                               6,
+                                                               6.5,
+                                                               10,
+                                                               9.5
+                                                           ]
+                                                }
+                                   }
+                     }
+                 ]
+}

@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "I":  "stellar_evolution:steel_ingot",
+                "S":  "minecraft:stick"
+            },
+    "pattern":  [
+                    "II",
+                    "IS",
+                    " S"
+                ],
+    "result":  {
+                   "id":  "stellar_evolution:steel_axe",
+                   "count":  1
+               }
+}

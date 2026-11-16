@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "stellar_evolution:copper_pipe",
+    "P": "stellar_evolution:copper_plate"
+  },
+  "pattern": [
+    "CP",
+    "PC"
+  ],
+  "result": {
+    "count": 4,
+    "id": "stellar_evolution:machine_pipe"
+  }
+}

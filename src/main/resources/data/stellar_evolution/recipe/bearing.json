@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "stellar_evolution:steel_rod",
+    "S": "stellar_evolution:steel_plate"
+  },
+  "pattern": [
+    "RSR"
+  ],
+  "result": {
+    "id": "stellar_evolution:bearing"
+  }
+}

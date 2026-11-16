@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "stellar_evolution:block/engine_machine_shell" }
+    }
+}

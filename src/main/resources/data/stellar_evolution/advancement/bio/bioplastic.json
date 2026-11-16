@@ -1,0 +1,29 @@
+{
+    "display":  {
+                    "icon":  {
+                                 "id":  "stellar_evolution:bioplastic_pellets"
+                             },
+                    "title":  {
+                                  "translate":  "advancement.stellar_evolution.bio.bioplastic.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancement.stellar_evolution.bio.bioplastic.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true
+                },
+    "parent":  "stellar_evolution:bio/reactor",
+    "criteria":  {
+                     "unlock":  {
+                                    "trigger":  "minecraft:inventory_changed",
+                                    "conditions":  {
+                                                       "items":  [
+                                                                     {
+                                                                         "items":  "stellar_evolution:bioplastic_pellets"
+                                                                     }
+                                                                 ]
+                                                   }
+                                }
+                 }
+}

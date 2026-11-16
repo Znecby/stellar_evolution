@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "facing=east": { "model": "stellar_evolution:block/flow_limiter_x" },
+        "facing=west": { "model": "stellar_evolution:block/flow_limiter_x", "y": 180 },
+        "facing=south": { "model": "stellar_evolution:block/flow_limiter_z" },
+        "facing=north": { "model": "stellar_evolution:block/flow_limiter_z", "y": 180 },
+        "facing=up": { "model": "stellar_evolution:block/flow_limiter_y" },
+        "facing=down": { "model": "stellar_evolution:block/flow_limiter_y", "x": 180 }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "display":  {
+                    "icon":  {
+                                 "id":  "stellar_evolution:gasifier"
+                             },
+                    "title":  {
+                                  "translate":  "advancement.stellar_evolution.coal.gasifier.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancement.stellar_evolution.coal.gasifier.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true
+                },
+    "parent":  "stellar_evolution:industry/flux_coil",
+    "criteria":  {
+                     "unlock":  {
+                                    "trigger":  "minecraft:inventory_changed",
+                                    "conditions":  {
+                                                       "items":  [
+                                                                     {
+                                                                         "items":  "stellar_evolution:gasifier"
+                                                                     }
+                                                                 ]
+                                                   }
+                                }
+                 }
+}

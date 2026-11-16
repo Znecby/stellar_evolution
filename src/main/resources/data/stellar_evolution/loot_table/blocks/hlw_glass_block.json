@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        { "type": "minecraft:item", "name": "stellar_evolution:hlw_glass_block" }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "stellar_evolution:blocks/hlw_glass_block"
+}

@@ -1,0 +1,16 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "I":  "stellar_evolution:steel_ingot"
+            },
+    "pattern":  [
+                    "I I",
+                    "III",
+                    "III"
+                ],
+    "result":  {
+                   "id":  "stellar_evolution:steel_chestplate",
+                   "count":  1
+               }
+}

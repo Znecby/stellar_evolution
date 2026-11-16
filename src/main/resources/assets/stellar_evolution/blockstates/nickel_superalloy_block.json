@@ -1,0 +1,5 @@
+﻿{
+    "variants": {
+        "": { "model": "stellar_evolution:block/nickel_superalloy_block" }
+    }
+}

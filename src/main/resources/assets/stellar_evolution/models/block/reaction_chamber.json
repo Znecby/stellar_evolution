@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "stellar_evolution:block/reaction_chamber_bottom",
+    "side": "stellar_evolution:block/reaction_chamber_side",
+    "top": "stellar_evolution:block/reaction_chamber_top"
+  }
+}

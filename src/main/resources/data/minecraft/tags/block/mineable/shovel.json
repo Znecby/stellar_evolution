@@ -1,0 +1,10 @@
+{
+    "replace":  false,
+    "values":  [
+                   "stellar_evolution:mechanical_farmland",
+                   "stellar_evolution:mechanical_sand",
+                   "stellar_evolution:mechanical_soul_sand",
+                   "stellar_evolution:mechanical_grass",
+                   "stellar_evolution:moon_regolith"
+               ]
+}

@@ -1,0 +1,7 @@
+{
+    "variants":  {
+                     "":  {
+                              "model":  "stellar_evolution:block/particle_source_cooler_w"
+                          }
+                 }
+}

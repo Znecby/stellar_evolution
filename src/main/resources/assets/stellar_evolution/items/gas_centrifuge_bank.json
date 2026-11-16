@@ -1,0 +1,6 @@
+{
+    "model":  {
+                  "type":  "minecraft:model",
+                  "model":  "stellar_evolution:block/fission_centrifuge_item"
+              }
+}

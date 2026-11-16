@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": "stellar_evolution:rugged_lead_welding_plate",
+    "G": "stellar_evolution:graphite_rod"
+  },
+  "pattern": [
+    "LLL",
+    "GGG",
+    "LLL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stellar_evolution:reflector_module"
+  }
+}

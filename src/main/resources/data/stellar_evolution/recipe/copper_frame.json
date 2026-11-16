@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:copper_block",
+    "P": "stellar_evolution:copper_plate"
+  },
+  "pattern": [
+    "BPB",
+    "P P",
+    "BPB"
+  ],
+  "result": {
+    "count": 4,
+    "id": "stellar_evolution:copper_frame"
+  }
+}

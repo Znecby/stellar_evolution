@@ -1,0 +1,169 @@
+{
+    "parent":  "minecraft:block/block",
+    "textures":  {
+                     "copper":  "minecraft:block/copper_block",
+                     "particle":  "minecraft:block/copper_block"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      14.5,
+                                      30,
+                                      14.5
+                                  ],
+                         "to":  [
+                                    17.5,
+                                    31,
+                                    17.5
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      10,
+                                      30.2,
+                                      15
+                                  ],
+                         "to":  [
+                                    14.5,
+                                    31,
+                                    17
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      17.5,
+                                      30.2,
+                                      15
+                                  ],
+                         "to":  [
+                                    22,
+                                    31,
+                                    17
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      15,
+                                      30.2,
+                                      10
+                                  ],
+                         "to":  [
+                                    17,
+                                    31,
+                                    14.5
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      15,
+                                      30.2,
+                                      17.5
+                                  ],
+                         "to":  [
+                                    17,
+                                    31,
+                                    22
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     }
+                 ]
+}

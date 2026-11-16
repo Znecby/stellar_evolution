@@ -1,0 +1,22 @@
+{
+    "display":  {
+                    "icon":  {
+                                 "id":  "minecraft:beacon"
+                             },
+                    "title":  {
+                                  "translate":  "advancement.stellar_evolution.fission.800mw.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancement.stellar_evolution.fission.800mw.description"
+                                    },
+                    "frame":  "challenge",
+                    "show_toast":  true,
+                    "announce_to_chat":  true
+                },
+    "parent":  "stellar_evolution:fission/steam_turbine",
+    "criteria":  {
+                     "impossible":  {
+                                        "trigger":  "minecraft:impossible"
+                                    }
+                 }
+}

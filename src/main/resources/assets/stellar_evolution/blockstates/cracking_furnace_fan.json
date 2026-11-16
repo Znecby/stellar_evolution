@@ -1,0 +1,7 @@
+{
+    "variants":  {
+                     "":  {
+                              "model":  "stellar_evolution:block/cracking_furnace_fan"
+                          }
+                 }
+}

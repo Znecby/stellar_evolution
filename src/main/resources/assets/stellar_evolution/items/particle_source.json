@@ -1,0 +1,6 @@
+{
+    "model":  {
+                  "type":  "minecraft:model",
+                  "model":  "stellar_evolution:block/particle_source_item"
+              }
+}

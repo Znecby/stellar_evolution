@@ -1,0 +1,29 @@
+{
+    "display":  {
+                    "icon":  {
+                                 "id":  "stellar_evolution:piston_assembly"
+                             },
+                    "title":  {
+                                  "translate":  "advancement.stellar_evolution.industry.piston.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancement.stellar_evolution.industry.piston.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true
+                },
+    "parent":  "stellar_evolution:industry/steel",
+    "criteria":  {
+                     "unlock":  {
+                                    "trigger":  "minecraft:inventory_changed",
+                                    "conditions":  {
+                                                       "items":  [
+                                                                     {
+                                                                         "items":  "stellar_evolution:piston_assembly"
+                                                                     }
+                                                                 ]
+                                                   }
+                                }
+                 }
+}

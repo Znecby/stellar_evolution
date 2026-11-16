@@ -1,0 +1,6 @@
+{
+    "model":  {
+                  "model":  "stellar_evolution:block/mechanical_farmland",
+                  "type":  "minecraft:model"
+              }
+}

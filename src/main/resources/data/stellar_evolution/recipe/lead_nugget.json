@@ -1,0 +1,11 @@
+﻿{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "stellar_evolution:lead_ingot"
+  ],
+  "result": {
+    "count": 9,
+    "id": "stellar_evolution:lead_nugget"
+  }
+}

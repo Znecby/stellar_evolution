@@ -1,0 +1,6 @@
+﻿{
+    "model": {
+        "type": "minecraft:model",
+        "model": "stellar_evolution:item/dt_fusion_core"
+    }
+}

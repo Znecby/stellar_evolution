@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "#stellar_evolution:plastic/t1"
+  },
+  "pattern": [
+    "BB"
+  ],
+  "result": {
+    "id": "stellar_evolution:circuit_substrate"
+  }
+}

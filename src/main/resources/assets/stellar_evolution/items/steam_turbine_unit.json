@@ -1,0 +1,6 @@
+{
+    "model":  {
+                  "type":  "minecraft:model",
+                  "model":  "stellar_evolution:block/steam_turbine_unit_item"
+              }
+}

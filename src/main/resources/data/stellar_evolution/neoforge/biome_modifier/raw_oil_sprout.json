@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "stellar_evolution:raw_oil_sprout",
+  "step": "fluid_springs"
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": "stellar_evolution:gold_plate",
+    "W": "stellar_evolution:copper_wire",
+    "I": "minecraft:copper_ingot"
+  },
+  "pattern": [
+    "GW",
+    "WI"
+  ],
+  "result": {
+    "id": "stellar_evolution:sensor"
+  }
+}

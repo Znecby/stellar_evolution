@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "stellar_evolution:machine_pipe",
+    "S": "stellar_evolution:steel_plate"
+  },
+  "pattern": [
+    "SSS",
+    "SPS",
+    "SSS"
+  ],
+  "result": {
+    "id": "stellar_evolution:machine_logistics_hatch"
+  }
+}

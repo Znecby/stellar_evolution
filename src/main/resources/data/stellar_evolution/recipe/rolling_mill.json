@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "stellar_evolution:steel_rod",
+    "B": "stellar_evolution:bearing",
+    "S": "stellar_evolution:steel_plate",
+    "F": "stellar_evolution:copper_frame"
+  },
+  "pattern": [
+    "RBR",
+    "RBR",
+    "SFS"
+  ],
+  "result": {
+    "id": "stellar_evolution:rolling_mill"
+  }
+}

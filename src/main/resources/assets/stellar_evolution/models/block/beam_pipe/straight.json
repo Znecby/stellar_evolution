@@ -1,0 +1,181 @@
+{
+    "parent":  "minecraft:block/block",
+    "ambientocclusion":  false,
+    "textures":  {
+                     "outer":  "stellar_evolution:block/tungsten_block",
+                     "core":  "minecraft:block/polished_andesite",
+                     "particle":  "stellar_evolution:block/tungsten_block"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      5,
+                                      9,
+                                      0
+                                  ],
+                         "to":  [
+                                    11,
+                                    11,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#outer"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#outer"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#outer",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#outer",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#outer"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#outer"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      4.99863,
+                                      4.99863,
+                                      -0.00137
+                                  ],
+                         "to":  [
+                                    10.99863,
+                                    6.99863,
+                                    15.99863
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#outer"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#outer"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#outer",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#outer",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#outer"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#outer"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      4.99726,
+                                      6.99726,
+                                      -0.00274
+                                  ],
+                         "to":  [
+                                    6.99726,
+                                    8.99726,
+                                    15.99726
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#outer"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#outer"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#outer",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#outer",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#outer"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#outer"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      8.99589,
+                                      6.99589,
+                                      -0.00411
+                                  ],
+                         "to":  [
+                                    10.99589,
+                                    8.99589,
+                                    15.99589
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#outer"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#outer"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#outer",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#outer",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#outer"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#outer"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      6.99452,
+                                      6.99452,
+                                      -0.00548
+                                  ],
+                         "to":  [
+                                    8.99452,
+                                    8.99452,
+                                    15.99452
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#core"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#core"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#core",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#core",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#core"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#core"
+                                                }
+                                   }
+                     }
+                 ]
+}

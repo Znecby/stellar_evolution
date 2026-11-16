@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "stellar_evolution:steel_plate",
+    "L": "stellar_evolution:lead_plate",
+    "S": "minecraft:netherite_ingot",
+    "B": "minecraft:barrel"
+  },
+  "pattern": [
+    "PLP",
+    "SBS"
+  ],
+  "result": {
+    "id": "stellar_evolution:reaction_chamber"
+  }
+}

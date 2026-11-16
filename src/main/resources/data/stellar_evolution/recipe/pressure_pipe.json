@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "stellar_evolution:copper_pipe",
+    "P": "stellar_evolution:steel_plate",
+    "S": "#stellar_evolution:plastic/t1"
+  },
+  "pattern": [
+    "CPC",
+    "PSP"
+  ],
+  "result": {
+    "count": 4,
+    "id": "stellar_evolution:pressure_pipe"
+  }
+}

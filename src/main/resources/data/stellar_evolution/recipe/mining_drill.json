@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": "stellar_evolution:sensor",
+    "F": "stellar_evolution:copper_frame",
+    "W": "stellar_evolution:rugged_tungsten_welding_plate",
+    "M": "stellar_evolution:electric_motor",
+    "D": "stellar_evolution:drill_bit"
+  },
+  "pattern": [
+    "NFN",
+    "WMW",
+    "WDW"
+  ],
+  "result": {
+    "id": "stellar_evolution:mining_drill"
+  }
+}

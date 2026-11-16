@@ -1,0 +1,419 @@
+{
+    "parent":  "minecraft:block/block",
+    "ambientocclusion":  false,
+    "textures":  {
+                     "copper":  "minecraft:block/copper_block",
+                     "dark":  "minecraft:block/polished_blackstone",
+                     "particle":  "minecraft:block/copper_block"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      22,
+                                      1,
+                                      30.2
+                                  ],
+                         "to":  [
+                                    26,
+                                    7,
+                                    31.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               6,
+                                                               7.1999999999999993,
+                                                               10,
+                                                               8.8
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper",
+                                                  "uv":  [
+                                                             6,
+                                                             7.1999999999999993,
+                                                             10,
+                                                             8.8
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper",
+                                                     "uv":  [
+                                                                6,
+                                                                5,
+                                                                10,
+                                                                11
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper",
+                                                     "uv":  [
+                                                                6,
+                                                                5,
+                                                                10,
+                                                                11
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7.1999999999999993,
+                                                               5,
+                                                               8.8,
+                                                               11
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7.1999999999999993,
+                                                               5,
+                                                               8.8,
+                                                               11
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      21.99863,
+                                      5.99863,
+                                      29.79863
+                                  ],
+                         "to":  [
+                                    25.99863,
+                                    6.99863,
+                                    31.79863
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               6,
+                                                               7,
+                                                               10,
+                                                               9
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper",
+                                                  "uv":  [
+                                                             6,
+                                                             7,
+                                                             10,
+                                                             9
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper",
+                                                     "uv":  [
+                                                                6,
+                                                                7.5,
+                                                                10,
+                                                                8.5
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper",
+                                                     "uv":  [
+                                                                6,
+                                                                7.5,
+                                                                10,
+                                                                8.5
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7,
+                                                               7.5,
+                                                               9,
+                                                               8.5
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7,
+                                                               7.5,
+                                                               9,
+                                                               8.5
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      21.99726,
+                                      8.99726,
+                                      29.79726
+                                  ],
+                         "to":  [
+                                    25.99726,
+                                    9.99726,
+                                    31.79726
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               6,
+                                                               7,
+                                                               10,
+                                                               9
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper",
+                                                  "uv":  [
+                                                             6,
+                                                             7,
+                                                             10,
+                                                             9
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper",
+                                                     "uv":  [
+                                                                6,
+                                                                7.5,
+                                                                10,
+                                                                8.5
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper",
+                                                     "uv":  [
+                                                                6,
+                                                                7.5,
+                                                                10,
+                                                                8.5
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7,
+                                                               7.5,
+                                                               9,
+                                                               8.5
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7,
+                                                               7.5,
+                                                               9,
+                                                               8.5
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      21.99589,
+                                      6.99589,
+                                      29.79589
+                                  ],
+                         "to":  [
+                                    22.99589,
+                                    8.99589,
+                                    31.79589
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7.5,
+                                                               7,
+                                                               8.5,
+                                                               9
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper",
+                                                  "uv":  [
+                                                             7.5,
+                                                             7,
+                                                             8.5,
+                                                             9
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper",
+                                                     "uv":  [
+                                                                7.5,
+                                                                7,
+                                                                8.5,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper",
+                                                     "uv":  [
+                                                                7.5,
+                                                                7,
+                                                                8.5,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7,
+                                                               7,
+                                                               9,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7,
+                                                               7,
+                                                               9,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      24.99452,
+                                      6.99452,
+                                      29.794520000000002
+                                  ],
+                         "to":  [
+                                    25.99452,
+                                    8.99452,
+                                    31.794520000000002
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7.5,
+                                                               7,
+                                                               8.5,
+                                                               9
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper",
+                                                  "uv":  [
+                                                             7.5,
+                                                             7,
+                                                             8.5,
+                                                             9
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper",
+                                                     "uv":  [
+                                                                7.5,
+                                                                7,
+                                                                8.5,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper",
+                                                     "uv":  [
+                                                                7.5,
+                                                                7,
+                                                                8.5,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7,
+                                                               7,
+                                                               9,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7,
+                                                               7,
+                                                               9,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      22.99315,
+                                      6.99315,
+                                      29.79315
+                                  ],
+                         "to":  [
+                                    24.99315,
+                                    8.99315,
+                                    30.79315
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#dark",
+                                                    "uv":  [
+                                                               7,
+                                                               7.5,
+                                                               9,
+                                                               8.5
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#dark",
+                                                  "uv":  [
+                                                             7,
+                                                             7.5,
+                                                             9,
+                                                             8.5
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#dark",
+                                                     "uv":  [
+                                                                7,
+                                                                7,
+                                                                9,
+                                                                9
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#dark",
+                                                     "uv":  [
+                                                                7,
+                                                                7,
+                                                                9,
+                                                                9
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#dark",
+                                                    "uv":  [
+                                                               7.5,
+                                                               7,
+                                                               8.5,
+                                                               9
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#dark",
+                                                    "uv":  [
+                                                               7.5,
+                                                               7,
+                                                               8.5,
+                                                               9
+                                                           ]
+                                                }
+                                   }
+                     }
+                 ]
+}

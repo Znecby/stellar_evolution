@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "stellar_evolution:steel_plate",
+  "result": {
+    "count": 1,
+    "id": "stellar_evolution:plate_mold"
+  }
+}

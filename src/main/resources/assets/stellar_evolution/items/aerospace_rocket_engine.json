@@ -1,0 +1,6 @@
+{
+    "model":  {
+                  "model":  "stellar_evolution:block/aerospace_rocket_engine_item",
+                  "type":  "minecraft:model"
+              }
+}

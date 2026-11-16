@@ -1,0 +1,29 @@
+{
+    "display":  {
+                    "icon":  {
+                                 "id":  "stellar_evolution:steam_turbine_unit"
+                             },
+                    "title":  {
+                                  "translate":  "advancement.stellar_evolution.fission.steam_turbine.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancement.stellar_evolution.fission.steam_turbine.description"
+                                    },
+                    "frame":  "goal",
+                    "show_toast":  true,
+                    "announce_to_chat":  true
+                },
+    "parent":  "stellar_evolution:fission/reaction_chamber",
+    "criteria":  {
+                     "unlock":  {
+                                    "trigger":  "minecraft:inventory_changed",
+                                    "conditions":  {
+                                                       "items":  [
+                                                                     {
+                                                                         "items":  "stellar_evolution:steam_turbine_unit"
+                                                                     }
+                                                                 ]
+                                                   }
+                                }
+                 }
+}

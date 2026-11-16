@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "stellar_evolution:debris_dust",
+  "result": {
+    "id": "minecraft:netherite_scrap"
+  },
+  "experience": 2.0,
+  "cookingtime": 200
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "stellar_evolution:copper_plate",
+    "G": "minecraft:glass"
+  },
+  "pattern": [
+    "P",
+    "G",
+    "P"
+  ],
+  "result": {
+    "count": 4,
+    "id": "stellar_evolution:capacitor"
+  }
+}

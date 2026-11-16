@@ -1,0 +1,14 @@
+.gradle/
+build/
+run/
+run-*/
+logs/
+*.log
+.modmind/
+.modtool/
+docs/
+模板/材料/深色/
+模板/材料/浅色/double_copper_plate.png
+.vscode/
+net/
+启动客户端.exe

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "S": "minecraft:smooth_stone",
+    "P": "stellar_evolution:copper_plate",
+    "C": "stellar_evolution:copper_gear"
+  },
+  "pattern": [
+    "SPS",
+    "PCP",
+    "SPS"
+  ],
+  "result": {
+    "id": "stellar_evolution:heat_engine"
+  }
+}

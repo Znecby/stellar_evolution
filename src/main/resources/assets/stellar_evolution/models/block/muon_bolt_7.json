@@ -1,0 +1,151 @@
+{
+    "parent":  "minecraft:block/block",
+    "ambientocclusion":  false,
+    "textures":  {
+                     "neth":  "minecraft:block/netherite_block",
+                     "tung":  "stellar_evolution:block/tungsten_block",
+                     "gold":  "minecraft:block/gold_block",
+                     "dark":  "minecraft:block/polished_blackstone",
+                     "copper":  "minecraft:block/copper_block",
+                     "iron":  "minecraft:block/iron_block",
+                     "particle":  "minecraft:block/netherite_block"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      12.868,
+                                      28.85,
+                                      13.819999999999999
+                                  ],
+                         "to":  [
+                                    14.628000000000002,
+                                    31,
+                                    15.58
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7.12,
+                                                               7.12,
+                                                               8.88,
+                                                               8.88
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper",
+                                                  "uv":  [
+                                                             7.12,
+                                                             7.12,
+                                                             8.88,
+                                                             8.88
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper",
+                                                     "uv":  [
+                                                                7.12,
+                                                                6.925,
+                                                                8.88,
+                                                                9.075
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper",
+                                                     "uv":  [
+                                                                7.12,
+                                                                6.925,
+                                                                8.88,
+                                                                9.075
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7.12,
+                                                               6.925,
+                                                               8.88,
+                                                               9.075
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper",
+                                                    "uv":  [
+                                                               7.12,
+                                                               6.925,
+                                                               8.88,
+                                                               9.075
+                                                           ]
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      13.148000000000001,
+                                      31,
+                                      14.1
+                                  ],
+                         "to":  [
+                                    14.348,
+                                    31.450000000000003,
+                                    15.299999999999999
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#gold",
+                                                    "uv":  [
+                                                               7.4,
+                                                               7.4,
+                                                               8.6,
+                                                               8.6
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#gold",
+                                                  "uv":  [
+                                                             7.4,
+                                                             7.4,
+                                                             8.6,
+                                                             8.6
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#gold",
+                                                     "uv":  [
+                                                                7.4,
+                                                                7.5,
+                                                                8.6,
+                                                                8.5
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#gold",
+                                                     "uv":  [
+                                                                7.4,
+                                                                7.5,
+                                                                8.6,
+                                                                8.5
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#gold",
+                                                    "uv":  [
+                                                               7.4,
+                                                               7.5,
+                                                               8.6,
+                                                               8.5
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#gold",
+                                                    "uv":  [
+                                                               7.4,
+                                                               7.5,
+                                                               8.6,
+                                                               8.5
+                                                           ]
+                                                }
+                                   }
+                     }
+                 ]
+}

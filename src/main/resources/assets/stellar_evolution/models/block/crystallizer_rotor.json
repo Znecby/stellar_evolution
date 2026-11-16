@@ -1,0 +1,201 @@
+{
+    "parent":  "minecraft:block/block",
+    "textures":  {
+                     "cold":  "minecraft:block/amethyst_block",
+                     "particle":  "minecraft:block/amethyst_block"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      8,
+                                      26,
+                                      8
+                                  ],
+                         "to":  [
+                                    12,
+                                    30,
+                                    12
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#cold"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#cold"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#cold"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#cold"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#cold"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#cold"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      20,
+                                      26,
+                                      8
+                                  ],
+                         "to":  [
+                                    24,
+                                    30,
+                                    12
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#cold"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#cold"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#cold"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#cold"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#cold"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#cold"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      8,
+                                      26,
+                                      20
+                                  ],
+                         "to":  [
+                                    12,
+                                    30,
+                                    24
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#cold"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#cold"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#cold"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#cold"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#cold"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#cold"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      20,
+                                      26,
+                                      20
+                                  ],
+                         "to":  [
+                                    24,
+                                    30,
+                                    24
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#cold"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#cold"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#cold"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#cold"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#cold"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#cold"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      13,
+                                      26,
+                                      13
+                                  ],
+                         "to":  [
+                                    19,
+                                    31,
+                                    19
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#cold"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#cold"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#cold"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#cold"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#cold"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#cold"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      14.8,
+                                      31,
+                                      14.8
+                                  ],
+                         "to":  [
+                                    17.2,
+                                    32,
+                                    17.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#cold"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#cold"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#cold"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#cold"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#cold"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#cold"
+                                                }
+                                   }
+                     }
+                 ]
+}

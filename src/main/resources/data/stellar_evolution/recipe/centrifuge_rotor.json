@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": "stellar_evolution:rugged_high_speed_steel_welding_plate",
+    "G": "stellar_evolution:high_speed_steel_gear",
+    "M": "stellar_evolution:electric_motor"
+  },
+  "pattern": [
+    " W ",
+    "GMG",
+    " W "
+  ],
+  "result": {
+    "count": 1,
+    "id": "stellar_evolution:centrifuge_rotor"
+  }
+}

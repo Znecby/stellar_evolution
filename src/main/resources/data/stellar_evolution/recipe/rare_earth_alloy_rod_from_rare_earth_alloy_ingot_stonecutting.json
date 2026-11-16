@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": "stellar_evolution:rare_earth_alloy_ingot",
+    "result": {
+        "id": "stellar_evolution:rare_earth_alloy_rod",
+        "count": 2
+    }
+}

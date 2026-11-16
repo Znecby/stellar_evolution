@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "stellar_evolution:plate_mold",
+    "stellar_evolution:rod_mold",
+    "stellar_evolution:gear_mold"
+  ]
+}

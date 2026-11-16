@@ -1,0 +1,143 @@
+{
+    "multipart":  [
+                      {
+                          "when":  {
+                                       "stream":  "0"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/core_muon"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "stream":  "1"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/core_proton"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "stream":  "2"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/core_deuteron"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "stream":  "3"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/core_alpha"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "stream":  "4"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/core_neutron"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "stream":  "5"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/core_lead_ion"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "stream":  "6"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/core_uranium_ion"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "stream":  "7"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/core_polarized_proton"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "stream":  "8"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/core_radioactive_ion"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "stream":  "9"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/core"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "north":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/arm",
+                                        "uvlock":  true
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "east":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/arm",
+                                        "uvlock":  true,
+                                        "y":  90
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "south":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/arm",
+                                        "uvlock":  true,
+                                        "y":  180
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "west":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/arm",
+                                        "uvlock":  true,
+                                        "y":  270
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "up":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/arm",
+                                        "uvlock":  true,
+                                        "x":  270
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "down":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/beam_pipe/arm",
+                                        "uvlock":  true,
+                                        "x":  90
+                                    }
+                      }
+                  ]
+}

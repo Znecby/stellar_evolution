@@ -1,0 +1,20 @@
+﻿{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "stellar_evolution:nickel_superalloy_block"
+                }
+            ],
+            "conditions": [
+                {
+                    "condition": "minecraft:survives_explosion"
+                }
+            ]
+        }
+    ],
+    "random_sequence": "stellar_evolution:blocks/nickel_superalloy_block"
+}

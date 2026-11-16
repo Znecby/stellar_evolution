@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "I": "minecraft:copper_ingot",
+    "C": "stellar_evolution:copper_gear"
+  },
+  "pattern": [
+    "ICI"
+  ],
+  "result": {
+    "id": "stellar_evolution:flow_limiter"
+  }
+}

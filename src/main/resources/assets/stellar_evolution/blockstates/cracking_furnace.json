@@ -1,0 +1,208 @@
+{
+    "multipart":  [
+                      {
+                          "when": { "facing": "north" }, "apply": { "model": "stellar_evolution:block/cracking_furnace_north" }
+                      },
+                      {
+                          "when": { "facing": "east" }, "apply": { "model": "stellar_evolution:block/cracking_furnace_east" }
+                      },
+                      {
+                          "when": { "facing": "south" }, "apply": { "model": "stellar_evolution:block/cracking_furnace_south" }
+                      },
+                      {
+                          "when": { "facing": "west" }, "apply": { "model": "stellar_evolution:block/cracking_furnace_west" }
+                      },
+                      {
+                          "when":  {
+                                       "port_north_a":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_north_a_open"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_north_a":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_north_a_capped"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_north_b":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_north_b_open"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_north_b":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_north_b_capped"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_east_a":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_east_a_open"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_east_a":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_east_a_capped"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_east_b":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_east_b_open"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_east_b":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_east_b_capped"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_south_a":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_south_a_open"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_south_a":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_south_a_capped"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_south_b":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_south_b_open"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_south_b":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_south_b_capped"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_west_a":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_west_a_open"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_west_a":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_west_a_capped"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_west_b":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_west_b_open"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_west_b":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_west_b_capped"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_down_a":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_down_a_open"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_down_a":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_down_a_capped"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_down_b":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_down_b_open"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_down_b":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_down_b_capped"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_down_c":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_down_c_open"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_down_c":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_down_c_capped"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_down_d":  "false"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_down_d_open"
+                                    }
+                      },
+                      {
+                          "when":  {
+                                       "port_down_d":  "true"
+                                   },
+                          "apply":  {
+                                        "model":  "stellar_evolution:block/cracking_furnace_port_down_d_capped"
+                                    }
+                      }
+                  ]
+}

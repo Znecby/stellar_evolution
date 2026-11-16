@@ -1,0 +1,13 @@
+{
+    "model":  {
+                  "model":  "stellar_evolution:block/mechanical_grass",
+                  "type":  "minecraft:model",
+                  "tints":  [
+                                {
+                                    "downfall":  0.4,
+                                    "temperature":  0.8,
+                                    "type":  "minecraft:grass"
+                                }
+                            ]
+              }
+}

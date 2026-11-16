@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "#stellar_evolution:plastic/t4"
+  },
+  "pattern": [
+    "P P",
+    "P P",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stellar_evolution:corrosion_liner"
+  }
+}

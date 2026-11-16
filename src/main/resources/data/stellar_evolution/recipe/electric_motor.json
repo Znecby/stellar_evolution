@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": "stellar_evolution:copper_wire",
+    "G": "stellar_evolution:copper_gear",
+    "R": "stellar_evolution:steel_rod"
+  },
+  "pattern": [
+    " W ",
+    "WGW",
+    " R "
+  ],
+  "result": {
+    "id": "stellar_evolution:electric_motor"
+  }
+}

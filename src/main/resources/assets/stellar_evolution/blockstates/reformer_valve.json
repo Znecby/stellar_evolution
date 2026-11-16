@@ -1,0 +1,7 @@
+{
+    "variants":  {
+                     "":  {
+                              "model":  "stellar_evolution:block/reformer_valve"
+                          }
+                 }
+}

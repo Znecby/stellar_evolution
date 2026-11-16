@@ -1,0 +1,7 @@
+﻿{
+    "type": "minecraft:stonecutting",
+    "ingredient": "stellar_evolution:titanium_alloy_ingot",
+    "result": {
+        "id": "stellar_evolution:titanium_alloy_plate"
+    }
+}

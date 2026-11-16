@@ -1,0 +1,37 @@
+{
+    "parent":  "minecraft:block/block",
+    "textures":  {
+                     "metal":  "minecraft:block/copper_block",
+                     "particle":  "minecraft:block/copper_block"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      0,
+                                      0,
+                                      0
+                                  ],
+                         "to":  [
+                                    4,
+                                    16,
+                                    4
+                                ],
+                         "faces":  {
+                                       "north":  {
+                                                     "texture":  "#metal",
+                                                     "cullface":  "north"
+                                                 },
+                                       "east":  {
+                                                    "texture":  "#metal"
+                                                },
+                                       "south":  {
+                                                     "texture":  "#metal"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#metal",
+                                                    "cullface":  "west"
+                                                }
+                                   }
+                     }
+                 ]
+}

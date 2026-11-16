@@ -1,0 +1,7 @@
+{
+    "variants":  {
+                     "":  {
+                              "model":  "stellar_evolution:block/gas_centrifuge_rotor_b"
+                          }
+                 }
+}

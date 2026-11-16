@@ -1,0 +1,5 @@
+{
+    "variants":  {
+                     "":  { "model":  "stellar_evolution:block/heat_engine_rotor" }
+                 }
+}

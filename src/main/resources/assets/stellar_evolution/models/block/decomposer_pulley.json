@@ -1,0 +1,78 @@
+{
+    "parent":  "minecraft:block/block",
+    "ambientocclusion":  false,
+    "textures":  {
+                     "dark":  "minecraft:block/polished_blackstone",
+                     "particle":  "minecraft:block/polished_blackstone"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      8.8,
+                                      15.8,
+                                      14
+                                  ],
+                         "to":  [
+                                    9.8,
+                                    20.2,
+                                    18
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#dark",
+                                                    "uv":  [
+                                                               7.5,
+                                                               6,
+                                                               8.5,
+                                                               10
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#dark",
+                                                  "uv":  [
+                                                             7.5,
+                                                             6,
+                                                             8.5,
+                                                             10
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#dark",
+                                                     "uv":  [
+                                                                7.5,
+                                                                5.8000000000000007,
+                                                                8.5,
+                                                                10.2
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#dark",
+                                                     "uv":  [
+                                                                7.5,
+                                                                5.8000000000000007,
+                                                                8.5,
+                                                                10.2
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#dark",
+                                                    "uv":  [
+                                                               6,
+                                                               5.8000000000000007,
+                                                               10,
+                                                               10.2
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#dark",
+                                                    "uv":  [
+                                                               6,
+                                                               5.8000000000000007,
+                                                               10,
+                                                               10.2
+                                                           ]
+                                                }
+                                   }
+                     }
+                 ]
+}

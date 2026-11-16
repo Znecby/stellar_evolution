@@ -1,0 +1,84 @@
+name: Bug Report
+description: Report a crash, bug, or unexpected behavior
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!IMPORTANT]
+        > This project is developed with extensive AI assistance. Bug reports without logs are usually impossible to analyze.
+        > Please attach the full `latest.log` or crash report. Reports without logs may be closed without investigation.
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: Stellar Evolution version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: Minecraft version
+      placeholder: "26.1.2"
+    validations:
+      required: true
+
+  - type: input
+    id: neoforge-version
+    attributes:
+      label: NeoForge version
+      placeholder: "26.1.2.114"
+    validations:
+      required: true
+
+  - type: textarea
+    id: mod-list
+    attributes:
+      label: Installed mods
+      description: List all installed mods, or attach a screenshot of the mod list. State clearly if only Stellar Evolution was installed.
+      placeholder: "Stellar Evolution 0.1.0, JEI ..., Jade ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected to happen instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Place ...
+        2. Right-click ...
+        3. The game crashes / the machine stops ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (required)
+      description: |
+        Paste the full `logs/latest.log` or crash report from `crash-reports/`, or upload it to https://gist.github.com and paste the link.
+        Do not truncate the log. Reports without logs may be closed without investigation.
+      render: text
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have attached the full log or crash report.
+          required: true
+        - label: I have listed all installed mods, or confirmed that only Stellar Evolution was installed.
+          required: true

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "stellar_evolution:copper_rod",
+    "S": "stellar_evolution:steel_plate"
+  },
+  "pattern": [
+    "RSR",
+    "R R",
+    "RSR"
+  ],
+  "result": {
+    "id": "stellar_evolution:machine_frame"
+  }
+}

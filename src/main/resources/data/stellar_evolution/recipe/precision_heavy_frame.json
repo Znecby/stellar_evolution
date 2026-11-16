@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "stellar_evolution:netherite_rod",
+    "N": "stellar_evolution:netherite_plate",
+    "G": "stellar_evolution:tungsten_copper_hard_alloy_gear",
+    "M": "stellar_evolution:machine_frame"
+  },
+  "pattern": [
+    "RNR",
+    "GMG",
+    "RNR"
+  ],
+  "result": {
+    "count": 2,
+    "id": "stellar_evolution:precision_heavy_frame"
+  }
+}

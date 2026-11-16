@@ -1,0 +1,10 @@
+﻿{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "stellar_evolution:lead_dust",
+  "result": {
+    "id": "stellar_evolution:lead_ingot"
+  },
+  "experience": 1.0,
+  "cookingtime": 200
+}

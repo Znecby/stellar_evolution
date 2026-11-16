@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "": {
+            "type": "stellar_evolution:ctm_casing",
+            "base": "stellar_evolution:block/hatch/rugged_support_machine_casing",
+            "ctm": "stellar_evolution:block/hatch/rugged_support_machine_casing_ctm"
+        }
+    }
+}

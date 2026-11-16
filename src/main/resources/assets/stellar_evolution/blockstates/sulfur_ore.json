@@ -1,0 +1,5 @@
+﻿{
+    "variants": {
+        "": { "model": "stellar_evolution:block/sulfur_ore" }
+    }
+}

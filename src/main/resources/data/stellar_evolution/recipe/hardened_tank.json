@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "stellar_evolution:tungsten_copper_hard_alloy_plate",
+    "G": "minecraft:glass"
+  },
+  "pattern": [
+    "PGP",
+    "G G",
+    "PGP"
+  ],
+  "result": {
+    "id": "stellar_evolution:hardened_tank"
+  }
+}

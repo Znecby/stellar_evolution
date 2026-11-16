@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "stellar_evolution:copper_plate",
+    "G": "minecraft:glass"
+  },
+  "pattern": [
+    "PGP",
+    "G G",
+    "PGP"
+  ],
+  "result": {
+    "id": "stellar_evolution:copper_tank"
+  }
+}

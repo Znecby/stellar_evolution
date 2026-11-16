@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": "stellar_evolution:servo",
+    "W": "stellar_evolution:rugged_stainless_steel_welding_plate",
+    "B": "#stellar_evolution:plastic/t3",
+    "P": "stellar_evolution:rare_earth_alloy_plate",
+    "M": "stellar_evolution:electric_motor"
+  },
+  "pattern": [
+    "SWS",
+    "BBB",
+    "PMP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "stellar_evolution:fuel_loading_head"
+  }
+}

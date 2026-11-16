@@ -1,0 +1,29 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:wheat",
+        "minecraft:wheat_seeds",
+        "minecraft:sugar_cane",
+        "minecraft:kelp",
+        "minecraft:dried_kelp",
+        "minecraft:cactus",
+        "minecraft:potato",
+        "minecraft:carrot",
+        "minecraft:beetroot",
+        "minecraft:melon_slice",
+        "minecraft:pumpkin",
+        "minecraft:apple",
+        "minecraft:sweet_berries",
+        "minecraft:brown_mushroom",
+        "minecraft:red_mushroom",
+        "minecraft:stick",
+        "minecraft:vine",
+        "minecraft:lily_pad",
+        "minecraft:bamboo",
+        "minecraft:cocoa_beans",
+        "minecraft:nether_wart",
+        "minecraft:sea_pickle",
+        "#minecraft:leaves",
+        "#minecraft:saplings"
+    ]
+}

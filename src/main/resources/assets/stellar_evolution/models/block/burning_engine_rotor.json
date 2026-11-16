@@ -1,0 +1,36 @@
+{
+    "parent": "minecraft:block/block",
+    "textures": {
+        "iron": "minecraft:block/iron_block",
+        "particle": "minecraft:block/iron_block"
+    },
+    "elements": [
+        {
+            "from": [12.7, 7.2, 7.2],
+            "to": [13.7, 8.8, 8.8],
+            "faces": { "down": { "texture": "#iron" }, "up": { "texture": "#iron" }, "north": { "texture": "#iron" }, "south": { "texture": "#iron" }, "west": { "texture": "#iron" }, "east": { "texture": "#iron" } }
+        },
+        {
+            "from": [12.9, 5.6, 7.4],
+            "to": [13.5, 10.4, 8.6],
+            "faces": { "down": { "texture": "#iron" }, "up": { "texture": "#iron" }, "north": { "texture": "#iron" }, "south": { "texture": "#iron" }, "west": { "texture": "#iron" }, "east": { "texture": "#iron" } }
+        },
+        {
+            "from": [12.9, 7.4, 5.6],
+            "to": [13.5, 8.6, 10.4],
+            "faces": { "down": { "texture": "#iron" }, "up": { "texture": "#iron" }, "north": { "texture": "#iron" }, "south": { "texture": "#iron" }, "west": { "texture": "#iron" }, "east": { "texture": "#iron" } }
+        },
+        {
+            "from": [12.9, 6.7, 7.1],
+            "to": [13.5, 9.3, 8.9],
+            "rotation": { "origin": [13.2, 8, 8], "axis": "x", "angle": 45, "rescale": false },
+            "faces": { "down": { "texture": "#iron" }, "up": { "texture": "#iron" }, "north": { "texture": "#iron" }, "south": { "texture": "#iron" }, "west": { "texture": "#iron" }, "east": { "texture": "#iron" } }
+        },
+        {
+            "from": [12.9, 6.7, 7.1],
+            "to": [13.5, 9.3, 8.9],
+            "rotation": { "origin": [13.2, 8, 8], "axis": "x", "angle": -45, "rescale": false },
+            "faces": { "down": { "texture": "#iron" }, "up": { "texture": "#iron" }, "north": { "texture": "#iron" }, "south": { "texture": "#iron" }, "west": { "texture": "#iron" }, "east": { "texture": "#iron" } }
+        }
+    ]
+}

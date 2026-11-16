@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "facing=north": { "model": "stellar_evolution:block/hatch/item_input_hatch" },
+        "facing=east": { "model": "stellar_evolution:block/hatch/item_input_hatch", "y": 90 },
+        "facing=south": { "model": "stellar_evolution:block/hatch/item_input_hatch", "y": 180 },
+        "facing=west": { "model": "stellar_evolution:block/hatch/item_input_hatch", "y": 270 },
+        "facing=up": { "model": "stellar_evolution:block/hatch/item_input_hatch", "x": 270 },
+        "facing=down": { "model": "stellar_evolution:block/hatch/item_input_hatch", "x": 90 }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "stellar_evolution:tungsten_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "stellar_evolution:tungsten_ingot"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "stellar_evolution:fluid_sprout",
+  "config": {
+    "fluid": "stellar_evolution:crude_oil",
+    "size": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 9,
+      "max_inclusive": 13
+    },
+    "sprout_chance": 0.4,
+    "surface_offset": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 6,
+      "max_inclusive": 9
+    }
+  }
+}

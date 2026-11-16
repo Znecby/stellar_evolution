@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "key": {
+        "P": "stellar_evolution:stainless_steel_plate",
+        "R": "stellar_evolution:stainless_steel_rod"
+    },
+    "pattern": [
+        "PRP",
+        "R R",
+        "PRP"
+    ],
+    "result": {
+        "count": 4,
+        "id": "stellar_evolution:steel_grate"
+    }
+}

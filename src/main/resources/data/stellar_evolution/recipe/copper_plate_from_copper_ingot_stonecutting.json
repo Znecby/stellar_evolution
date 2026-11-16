@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "minecraft:copper_ingot",
+  "result": {
+    "id": "stellar_evolution:copper_plate"
+  }
+}

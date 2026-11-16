@@ -1,0 +1,17 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": "stellar_evolution:lead_ingot",
+    "P": "stellar_evolution:lead_plate"
+  },
+  "pattern": [
+    " P ",
+    "PIP",
+    " P "
+  ],
+  "result": {
+    "count": 2,
+    "id": "stellar_evolution:lead_gear"
+  }
+}

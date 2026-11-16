@@ -1,0 +1,107 @@
+{
+    "parent":  "minecraft:block/block",
+    "textures":  {
+                     "bottom":  "minecraft:block/white_concrete",
+                     "top":  "minecraft:block/yellow_terracotta",
+                     "particle":  "minecraft:block/white_concrete",
+                     "line":  "minecraft:block/brown_terracotta"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      4.5,
+                                      4.5,
+                                      4.5
+                                  ],
+                         "to":  [
+                                    11.5,
+                                    7.6,
+                                    11.5
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#bottom"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#bottom"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#bottom"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#bottom"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#bottom"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#bottom"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      4.5,
+                                      7.6,
+                                      4.5
+                                  ],
+                         "to":  [
+                                    11.5,
+                                    8,
+                                    11.5
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#line"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#line"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#line"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#line"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#line"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#line"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      4.5,
+                                      8,
+                                      4.5
+                                  ],
+                         "to":  [
+                                    11.5,
+                                    11.5,
+                                    11.5
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#top"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#top"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#top"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#top"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#top"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#top"
+                                                }
+                                   }
+                     }
+                 ]
+}

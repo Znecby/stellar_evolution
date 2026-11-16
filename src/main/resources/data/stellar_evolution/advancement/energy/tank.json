@@ -1,0 +1,29 @@
+{
+    "display":  {
+                    "icon":  {
+                                 "id":  "stellar_evolution:copper_tank"
+                             },
+                    "title":  {
+                                  "translate":  "advancement.stellar_evolution.energy.tank.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancement.stellar_evolution.energy.tank.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true
+                },
+    "parent":  "stellar_evolution:energy/copper_pipe",
+    "criteria":  {
+                     "unlock":  {
+                                    "trigger":  "minecraft:inventory_changed",
+                                    "conditions":  {
+                                                       "items":  [
+                                                                     {
+                                                                         "items":  "stellar_evolution:copper_tank"
+                                                                     }
+                                                                 ]
+                                                   }
+                                }
+                 }
+}

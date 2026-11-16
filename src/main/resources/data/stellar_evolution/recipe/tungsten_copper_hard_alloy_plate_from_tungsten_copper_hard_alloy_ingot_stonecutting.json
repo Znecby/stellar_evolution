@@ -1,0 +1,7 @@
+﻿{
+    "type": "minecraft:stonecutting",
+    "ingredient": "stellar_evolution:tungsten_copper_hard_alloy_ingot",
+    "result": {
+        "id": "stellar_evolution:tungsten_copper_hard_alloy_plate"
+    }
+}

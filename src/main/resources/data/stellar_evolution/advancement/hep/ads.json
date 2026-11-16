@@ -1,0 +1,22 @@
+{
+  "display": {
+    "icon": {
+      "id": "stellar_evolution:zr_90"
+    },
+    "title": {
+      "translate": "advancement.stellar_evolution.hep.ads.title"
+    },
+    "description": {
+      "translate": "advancement.stellar_evolution.hep.ads.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "stellar_evolution:hep/first_beam",
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

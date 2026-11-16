@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "layer0":  "stellar_evolution:item/tungsten_steel_shovel"
+                 },
+    "parent":  "minecraft:item/handheld"
+}

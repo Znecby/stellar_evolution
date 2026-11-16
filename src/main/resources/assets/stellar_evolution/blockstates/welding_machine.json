@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "stellar_evolution:block/welding_machine" },
+        "facing=east": { "model": "stellar_evolution:block/welding_machine", "y": 90 },
+        "facing=south": { "model": "stellar_evolution:block/welding_machine", "y": 180 },
+        "facing=west": { "model": "stellar_evolution:block/welding_machine", "y": 270 }
+    }
+}

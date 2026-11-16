@@ -1,0 +1,6 @@
+﻿{
+    "textures":  {
+                     "layer0":  "stellar_evolution:item/steel_chestplate"
+                 },
+    "parent":  "minecraft:item/generated"
+}

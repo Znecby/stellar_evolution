@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": "stellar_evolution:steel_plate",
+    "G": "minecraft:glass",
+    "N": "stellar_evolution:nbr"
+  },
+  "pattern": [
+    " S ",
+    "GNG",
+    " S "
+  ],
+  "result": {
+    "id": "stellar_evolution:fluid_cell"
+  }
+}

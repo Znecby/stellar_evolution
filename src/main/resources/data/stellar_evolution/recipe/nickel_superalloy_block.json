@@ -1,0 +1,15 @@
+﻿{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "key": {
+        "I": "stellar_evolution:nickel_superalloy_ingot"
+    },
+    "pattern": [
+        "III",
+        "III",
+        "III"
+    ],
+    "result": {
+        "id": "stellar_evolution:nickel_superalloy_block"
+    }
+}

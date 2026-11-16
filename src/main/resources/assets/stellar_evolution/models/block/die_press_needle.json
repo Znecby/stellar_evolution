@@ -1,0 +1,20 @@
+{
+    "parent": "minecraft:block/block",
+    "textures": {
+        "copper": "minecraft:block/copper_block",
+        "gold": "minecraft:block/gold_block",
+        "particle": "minecraft:block/gold_block"
+    },
+    "elements": [
+        {
+            "from": [7.65, 7.6, 1.45],
+            "to": [8.35, 9.8, 1.9],
+            "faces": { "down": { "texture": "#copper" }, "up": { "texture": "#copper" }, "north": { "texture": "#copper" }, "south": { "texture": "#copper" }, "west": { "texture": "#copper" }, "east": { "texture": "#copper" } }
+        },
+        {
+            "from": [7.5, 7.2, 1.35],
+            "to": [8.5, 8.0, 1.95],
+            "faces": { "down": { "texture": "#gold" }, "up": { "texture": "#gold" }, "north": { "texture": "#gold" }, "south": { "texture": "#gold" }, "west": { "texture": "#gold" }, "east": { "texture": "#gold" } }
+        }
+    ]
+}

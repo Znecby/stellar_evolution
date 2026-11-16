@@ -1,0 +1,29 @@
+{
+    "display":  {
+                    "icon":  {
+                                 "id":  "stellar_evolution:u235"
+                             },
+                    "title":  {
+                                  "translate":  "advancement.stellar_evolution.fission.u235.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancement.stellar_evolution.fission.u235.description"
+                                    },
+                    "frame":  "goal",
+                    "show_toast":  true,
+                    "announce_to_chat":  true
+                },
+    "parent":  "stellar_evolution:fission/centrifuge",
+    "criteria":  {
+                     "unlock":  {
+                                    "trigger":  "minecraft:inventory_changed",
+                                    "conditions":  {
+                                                       "items":  [
+                                                                     {
+                                                                         "items":  "stellar_evolution:u235"
+                                                                     }
+                                                                 ]
+                                                   }
+                                }
+                 }
+}

@@ -1,0 +1,2643 @@
+{
+    "parent":  "minecraft:block/block",
+    "textures":  {
+                     "redstone":  "minecraft:block/redstone_block",
+                     "copper":  "minecraft:block/copper_block",
+                     "stairs":  "minecraft:block/cut_copper",
+                     "particle":  "minecraft:block/copper_block"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      0,
+                                      0,
+                                      0
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    3.2,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone",
+                                                    "cullface":  "down"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      0,
+                                      0
+                                  ],
+                         "to":  [
+                                    6.4,
+                                    3.2,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "down"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      9.6,
+                                      0,
+                                      0
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    3.2,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "down"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      0,
+                                      0
+                                  ],
+                         "to":  [
+                                    16,
+                                    3.2,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone",
+                                                    "cullface":  "down"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      0,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    3.2,
+                                    6.4
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "down"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      0,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    16,
+                                    3.2,
+                                    6.4
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "down"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      0,
+                                      9.6
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    3.2,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "down"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      0,
+                                      9.6
+                                  ],
+                         "to":  [
+                                    16,
+                                    3.2,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "down"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      0,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    3.2,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone",
+                                                    "cullface":  "down"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      0,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    6.4,
+                                    3.2,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "down"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      9.6,
+                                      0,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    3.2,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "down"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      0,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    16,
+                                    3.2,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone",
+                                                    "cullface":  "down"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      3.2,
+                                      0
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    6.4,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      3.2,
+                                      0
+                                  ],
+                         "to":  [
+                                    6.4,
+                                    4.8,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      4.8,
+                                      0
+                                  ],
+                         "to":  [
+                                    4.8,
+                                    6.4,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      9.6,
+                                      3.2,
+                                      0
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    4.8,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      11.2,
+                                      4.8,
+                                      0
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    6.4,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      3.2,
+                                      0
+                                  ],
+                         "to":  [
+                                    16,
+                                    6.4,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      3.2,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    4.8,
+                                    6.4
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      4.8,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    6.4,
+                                    4.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      3.2,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    6.4,
+                                    6.4,
+                                    6.4
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      9.6,
+                                      3.2,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    6.4,
+                                    6.4
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      3.2,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    16,
+                                    4.8,
+                                    6.4
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      4.8,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    16,
+                                    6.4,
+                                    4.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      6.4,
+                                      3.2,
+                                      6.4
+                                  ],
+                         "to":  [
+                                    9.6,
+                                    6.4,
+                                    9.6
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      3.2,
+                                      9.6
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    4.8,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      4.8,
+                                      11.2
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    6.4,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      3.2,
+                                      9.6
+                                  ],
+                         "to":  [
+                                    6.4,
+                                    6.4,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      9.6,
+                                      3.2,
+                                      9.6
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    6.4,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      3.2,
+                                      9.6
+                                  ],
+                         "to":  [
+                                    16,
+                                    4.8,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      4.8,
+                                      11.2
+                                  ],
+                         "to":  [
+                                    16,
+                                    6.4,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      3.2,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    6.4,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      3.2,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    6.4,
+                                    4.8,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      4.8,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    4.8,
+                                    6.4,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      9.6,
+                                      3.2,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    4.8,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      11.2,
+                                      4.8,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    6.4,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      3.2,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    16,
+                                    6.4,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      6.4,
+                                      6.4,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    9.6,
+                                    9.6,
+                                    6.4
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      6.4,
+                                      6.4
+                                  ],
+                         "to":  [
+                                    6.4,
+                                    9.6,
+                                    9.6
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      6.4,
+                                      6.4,
+                                      6.4
+                                  ],
+                         "to":  [
+                                    9.6,
+                                    9.6,
+                                    9.6
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      9.6,
+                                      6.4,
+                                      6.4
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    9.6,
+                                    9.6
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      6.4,
+                                      6.4,
+                                      9.6
+                                  ],
+                         "to":  [
+                                    9.6,
+                                    9.6,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      9.6,
+                                      0
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    12.8,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      11.2,
+                                      0
+                                  ],
+                         "to":  [
+                                    6.4,
+                                    12.8,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      9.6,
+                                      0
+                                  ],
+                         "to":  [
+                                    4.8,
+                                    11.2,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      9.6,
+                                      11.2,
+                                      0
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    12.8,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      11.2,
+                                      9.6,
+                                      0
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    11.2,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      9.6,
+                                      0
+                                  ],
+                         "to":  [
+                                    16,
+                                    12.8,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      11.2,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    12.8,
+                                    6.4
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      9.6,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    11.2,
+                                    4.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      9.6,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    6.4,
+                                    12.8,
+                                    6.4
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      9.6,
+                                      9.6,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    12.8,
+                                    6.4
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      11.2,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    16,
+                                    12.8,
+                                    6.4
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      9.6,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    16,
+                                    11.2,
+                                    4.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      6.4,
+                                      9.6,
+                                      6.4
+                                  ],
+                         "to":  [
+                                    9.6,
+                                    12.8,
+                                    9.6
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      11.2,
+                                      9.6
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    12.8,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      9.6,
+                                      11.2
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    11.2,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      9.6,
+                                      9.6
+                                  ],
+                         "to":  [
+                                    6.4,
+                                    12.8,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      9.6,
+                                      9.6,
+                                      9.6
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    12.8,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      11.2,
+                                      9.6
+                                  ],
+                         "to":  [
+                                    16,
+                                    12.8,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      9.6,
+                                      11.2
+                                  ],
+                         "to":  [
+                                    16,
+                                    11.2,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      9.6,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    12.8,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      11.2,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    6.4,
+                                    12.8,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      9.6,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    4.8,
+                                    11.2,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      9.6,
+                                      11.2,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    12.8,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      11.2,
+                                      9.6,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    11.2,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#stairs"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#stairs"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#stairs",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#stairs"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#stairs"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      9.6,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    16,
+                                    12.8,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      12.8,
+                                      0
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    16,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone",
+                                                  "cullface":  "up"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      12.8,
+                                      0
+                                  ],
+                         "to":  [
+                                    6.4,
+                                    16,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper",
+                                                  "cullface":  "up"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      9.6,
+                                      12.8,
+                                      0
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    16,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper",
+                                                  "cullface":  "up"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      12.8,
+                                      0
+                                  ],
+                         "to":  [
+                                    16,
+                                    16,
+                                    3.2
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone",
+                                                  "cullface":  "up"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone",
+                                                     "cullface":  "north"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      12.8,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    16,
+                                    6.4
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper",
+                                                  "cullface":  "up"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      12.8,
+                                      3.2
+                                  ],
+                         "to":  [
+                                    16,
+                                    16,
+                                    6.4
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper",
+                                                  "cullface":  "up"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      12.8,
+                                      9.6
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    16,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper",
+                                                  "cullface":  "up"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      12.8,
+                                      9.6
+                                  ],
+                         "to":  [
+                                    16,
+                                    16,
+                                    12.8
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper",
+                                                  "cullface":  "up"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      0,
+                                      12.8,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    3.2,
+                                    16,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone",
+                                                  "cullface":  "up"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone",
+                                                    "cullface":  "west"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      3.2,
+                                      12.8,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    6.4,
+                                    16,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper",
+                                                  "cullface":  "up"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      9.6,
+                                      12.8,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    12.8,
+                                    16,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#copper",
+                                                  "cullface":  "up"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#copper"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#copper",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#copper"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#copper"
+                                                }
+                                   }
+                     },
+                     {
+                         "from":  [
+                                      12.8,
+                                      12.8,
+                                      12.8
+                                  ],
+                         "to":  [
+                                    16,
+                                    16,
+                                    16
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "up":  {
+                                                  "texture":  "#redstone",
+                                                  "cullface":  "up"
+                                              },
+                                       "north":  {
+                                                     "texture":  "#redstone"
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#redstone",
+                                                     "cullface":  "south"
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#redstone"
+                                                },
+                                       "east":  {
+                                                    "texture":  "#redstone",
+                                                    "cullface":  "east"
+                                                }
+                                   }
+                     }
+                 ]
+}

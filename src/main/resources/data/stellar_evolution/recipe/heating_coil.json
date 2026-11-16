@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": "stellar_evolution:tungsten_wire",
+    "I": "stellar_evolution:steel_ingot"
+  },
+  "pattern": [
+    "WWW",
+    "WIW",
+    "WWW"
+  ],
+  "result": {
+    "id": "stellar_evolution:heating_coil"
+  }
+}

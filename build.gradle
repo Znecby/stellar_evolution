@@ -1,0 +1,127 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.143'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+// 清除 ModDevGradle 自动添加的仓库（maven.neoforged.net / libraries.minecraft.net 在部分国内网络不可达），
+// 必须在 repositories 代码块之前执行
+repositories.clear()
+
+repositories {
+    // 国内镜像优先，加速依赖下载
+    maven { url = 'https://maven.aliyun.com/repository/public' }
+    maven { url = 'https://maven.aliyun.com/repository/central' }
+    // Mojang 专用构件仓库（com.mojang:logging / patchy / text2speech 等仅在此发布，网络为间歇性可达）
+    maven { url = 'https://libraries.minecraft.net' }
+    // NeoForge 官方仓库的国内可访问镜像（forgecdn，与 maven.neoforged.net 内容一致）
+    maven { url = 'https://neoforged.forgecdn.net/releases' }
+    maven { url = 'https://neoforged.forgecdn.net/mojang-meta' }
+    mavenCentral()
+}
+
+base {
+    archivesName = project.archives_base_name
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 25
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(25)
+    withSourcesJar()
+}
+
+dependencies {
+    // JEI 配方查看联动（客户端侧 API，仅编译需要；运行时由 run/mods 中的 jei jar 提供）
+    compileOnly files('run/mods/jei-26.1.2-neoforge-29.43.0.107.jar')
+    // Jade 信息 HUD 联动（客户端侧 API，仅编译需要；运行时由 run/mods 中的 jade jar 提供）
+    compileOnly files('run/mods/jade-26.1.8-neoforge.jar')
+    // GuideME 手册（仅编译需要；运行时由 run/mods 中的 guideme jar 提供，未安装时不加载手册代码）
+    compileOnly files('run/mods/guideme-26.1.17-beta.jar')
+    // Curios 饰品栏 API 已随「刷宝」内容移出（见 C:\MCmod项目\刷宝模组遗留），不再依赖
+    // JUnit 5 单元测试（针对 kinetic.api 纯逻辑层）
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // JUnit Console 启动器：用于自定义测试任务（绕过 Gradle 测试工作器）
+    testRuntimeOnly 'org.junit.platform:junit-platform-console:1.11.4'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+// 本机（用户目录含非 ASCII 字符）上 Gradle 标准测试工作器无法通过 @argfile 启动（GradleWorkerMain 找不到），
+// 因此禁用标准 test 任务；纯 ASCII 路径环境可恢复 test 任务。
+tasks.named('test') {
+    enabled = false
+}
+
+neoForge {
+    version = project.neo_version
+    runs {
+        client {
+            client()
+            jvmArgument '-Xmx4G'
+            // 自动化验证用开关：-PquickPlayWorld=<存档目录名> 时客户端启动后直接进世界。
+            // 不传就是正常的主菜单；之所以需要它，是因为 JEI 的配方同步（RecipesReceivedEvent）
+            // 只在进入世界后触发，脚本化验证拿不到那批日志。
+            if (project.hasProperty('quickPlayWorld')) {
+                programArgument '--quickPlaySingleplayer'
+                programArgument project.property('quickPlayWorld').toString()
+            }
+        }
+        // 手册专用运行配置：直接进 GuideME 书页，改 guidebook/ 下的文件会热重载。
+        guide {
+            client()
+            jvmArgument '-Xmx4G'
+            systemProperty 'guideme.stellar_evolution.guide.sources', file('guidebook').absolutePath
+            systemProperty 'guideme.stellar_evolution.guide.sourcesNamespace', 'stellar_evolution'
+            systemProperty 'guideme.showOnStartup', 'stellar_evolution:guide'
+        }
+        server {
+            server()
+            programArgument '--nogui'
+            jvmArgument '-Xmx2G'
+        }
+        gameTestServer {
+            type = 'gameTestServer'
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'stellar_evolution'
+        }
+    }
+    mods {
+        "stellar_evolution" { sourceSet(sourceSets.main) }
+    }
+}
+
+// ModDevGradle 不会自动把 Minecraft 依赖注入测试源集，
+// 这里让测试配置继承 moddev 的编译/运行时依赖配置，使测试可引用 net.minecraft 等类。
+// 注意：modDev* 配置由上方 neoForge 代码块创建，因此必须放在其后。
+configurations.testImplementation.extendsFrom(configurations.modDevCompileDependencies)
+configurations.testRuntimeOnly.extendsFrom(configurations.modDevRuntimeDependencies)
+
+processResources {
+    filteringCharset = 'UTF-8'
+    inputs.property 'version', project.version
+    filesMatching('META-INF/neoforge.mods.toml') { expand version: project.version }
+    // 手册页面随模组打包；开发期由 runGuide 的 systemProperty 直接读取项目根目录的 guidebook/。
+    from('guidebook') {
+        into 'assets/stellar_evolution/guidebook'
+    }
+}
+
+// 单元测试运行方式：直接以命令行直传 -cp 启动 JUnit ConsoleLauncher（见上方 test 任务被禁用的原因）。
+tasks.register('runUnitTests', JavaExec) {
+    group = 'verification'
+    description = '运行 src/test 下的 JUnit 5 单元测试'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'org.junit.platform.console.ConsoleLauncher'
+    args = ['--select-package', 'dev.modmind.stellar_evolution', '--details', 'tree', '--disable-banner', '--fail-if-no-tests']
+}

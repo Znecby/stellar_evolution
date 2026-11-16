@@ -1,0 +1,78 @@
+{
+    "parent":  "minecraft:block/block",
+    "ambientocclusion":  false,
+    "textures":  {
+                     "light":  "minecraft:block/redstone_block",
+                     "particle":  "minecraft:block/redstone_block"
+                 },
+    "elements":  [
+                     {
+                         "from":  [
+                                      13.5,
+                                      29.2,
+                                      13.9
+                                  ],
+                         "to":  [
+                                    13.9,
+                                    29.8,
+                                    15.5
+                                ],
+                         "faces":  {
+                                       "down":  {
+                                                    "texture":  "#light",
+                                                    "uv":  [
+                                                               7.8,
+                                                               7.2,
+                                                               8.2,
+                                                               8.8
+                                                           ]
+                                                },
+                                       "up":  {
+                                                  "texture":  "#light",
+                                                  "uv":  [
+                                                             7.8,
+                                                             7.2,
+                                                             8.2,
+                                                             8.8
+                                                         ]
+                                              },
+                                       "north":  {
+                                                     "texture":  "#light",
+                                                     "uv":  [
+                                                                7.8,
+                                                                7.6999999999999993,
+                                                                8.2,
+                                                                8.3
+                                                            ]
+                                                 },
+                                       "south":  {
+                                                     "texture":  "#light",
+                                                     "uv":  [
+                                                                7.8,
+                                                                7.6999999999999993,
+                                                                8.2,
+                                                                8.3
+                                                            ]
+                                                 },
+                                       "west":  {
+                                                    "texture":  "#light",
+                                                    "uv":  [
+                                                               7.2,
+                                                               7.6999999999999993,
+                                                               8.8,
+                                                               8.3
+                                                           ]
+                                                },
+                                       "east":  {
+                                                    "texture":  "#light",
+                                                    "uv":  [
+                                                               7.2,
+                                                               7.6999999999999993,
+                                                               8.8,
+                                                               8.3
+                                                           ]
+                                                }
+                                   }
+                     }
+                 ]
+}

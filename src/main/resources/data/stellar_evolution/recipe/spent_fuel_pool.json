@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "stellar_evolution:steel_plate",
+    "L": "stellar_evolution:lead_plate",
+    "N": "minecraft:netherite_ingot",
+    "G": "minecraft:glass"
+  },
+  "pattern": [
+    "PNP",
+    "LGL",
+    "PNP"
+  ],
+  "result": {
+    "id": "stellar_evolution:spent_fuel_pool"
+  }
+}
