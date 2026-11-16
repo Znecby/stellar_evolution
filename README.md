@@ -84,7 +84,7 @@ The mod has **no hard dependencies**. The following integrations are optional:
 ## Installation
 
 1. Install NeoForge 26.1.2.114 for Minecraft 26.1.2.
-2. Place `stellar_evolution-0.1.0.jar` into the `mods` folder.
+2. Place `stellar_evolution-alpha0.1.0.jar` into the `mods` folder.
 3. Optionally install JEI, Jade, and GuideME.
 4. Launch the game.
 
@@ -102,7 +102,7 @@ On Windows:
 .\gradlew.bat build
 ```
 
-The built jar is written to `build/libs/stellar_evolution-0.1.0.jar`.
+The built jar is written to `build/libs/stellar_evolution-alpha0.1.0.jar`.
 
 ## Development
 

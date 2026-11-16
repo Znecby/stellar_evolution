@@ -27,6 +27,11 @@ base {
     archivesName = project.archives_base_name
 }
 
+// 发布 jar 使用 alpha 前缀命名：stellar_evolution-alpha0.1.0.jar
+tasks.named('jar') {
+    archiveFileName = "${project.archives_base_name}-alpha${project.mod_version}.jar"
+}
+
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
     options.release = 25
