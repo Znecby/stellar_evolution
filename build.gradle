@@ -128,5 +128,5 @@ tasks.register('runUnitTests', JavaExec) {
     dependsOn tasks.named('testClasses')
     classpath = sourceSets.test.runtimeClasspath
     mainClass = 'org.junit.platform.console.ConsoleLauncher'
-    args = ['--select-package', 'dev.modmind.stellar_evolution', '--details', 'tree', '--disable-banner', '--fail-if-no-tests']
+    args = ['--select-package', 'dev.znecby.stellar_evolution', '--details', 'tree', '--disable-banner', '--fail-if-no-tests']
 }

@@ -9,7 +9,7 @@ license="MIT"
     logoFile="icon.png"
     description='''工业科技向：热压差能源网络、2×2×2 大机器、固定多方块与储罐 / 管道，涵盖生化 / 石化 / 煤化工 / 空分 / 裂变 / 聚变 / 高能物理 / 选冶 / 基岩 / 月球、装备与质量投射轨道炮等产线。
 无硬前置；JEI / Jade / GuideME 为可选联动。当前版本仍在开发中。'''
-    authors="ModMind"
+    authors="Znecby"
 
 [[dependencies.stellar_evolution]]
     modId="neoforge"

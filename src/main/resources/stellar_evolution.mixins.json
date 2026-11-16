@@ -1,7 +1,7 @@
 {
     "required": true,
     "minVersion": "0.8",
-    "package": "dev.modmind.stellar_evolution.mixin",
+    "package": "dev.znecby.stellar_evolution.mixin",
     "compatibilityLevel": "JAVA_25",
     "injectors": {
         "defaultRequire": 1
