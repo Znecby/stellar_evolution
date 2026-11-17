@@ -4,7 +4,6 @@ run/
 run-*/
 logs/
 *.log
-.modmind/
 .modtool/
 docs/
 模板/材料/深色/
