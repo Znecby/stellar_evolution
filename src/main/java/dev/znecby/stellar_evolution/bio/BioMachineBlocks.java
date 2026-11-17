@@ -1,6 +1,7 @@
 package dev.znecby.stellar_evolution.bio;
 
 import dev.znecby.stellar_evolution.StellarEvolution;
+import dev.znecby.stellar_evolution.large.LargeMachineStructure;
 import dev.znecby.stellar_evolution.pipe.CopperPipeBlock;
 import dev.znecby.stellar_evolution.pipe.MachinePipeBlock;
 import java.util.EnumMap;
@@ -73,10 +74,7 @@ public final class BioMachineBlocks {
     private static final Map<BioMachineKind, DeferredBlock<BioMachineShellBlock>> SHELLS = new EnumMap<>(BioMachineKind.class);
 
     /** 一台机器占据的 8 格偏移（主方块在 (0,0,0)，其余 7 格由填充格占位）。 */
-    public static final int[][] CELL_OFFSETS = {
-            {0, 0, 0}, {1, 0, 0}, {0, 1, 0}, {0, 0, 1},
-            {1, 1, 0}, {1, 0, 1}, {0, 1, 1}, {1, 1, 1}
-    };
+    public static final int[][] CELL_OFFSETS = LargeMachineStructure.CELL_OFFSETS;
 
     /**
      * 一个接点：状态属性 + 它贴着的那一格（相对主方块）+ 铜管指向机器的方向。
@@ -90,19 +88,10 @@ public final class BioMachineBlocks {
      * <p>
      * 名字（{@code port_<面>_<格>}）同时也是 blockstate 里 {@code when} 条件的属性名，**两处必须一致**。
      */
-    public static final java.util.List<Port> PORTS = java.util.List.of(
-            new Port("port_north_a", BooleanProperty.create("port_north_a"), 0, 0, -1, Direction.SOUTH),
-            new Port("port_north_b", BooleanProperty.create("port_north_b"), 1, 0, -1, Direction.SOUTH),
-            new Port("port_east_a", BooleanProperty.create("port_east_a"), 2, 0, 0, Direction.WEST),
-            new Port("port_east_b", BooleanProperty.create("port_east_b"), 2, 0, 1, Direction.WEST),
-            new Port("port_south_a", BooleanProperty.create("port_south_a"), 0, 0, 2, Direction.NORTH),
-            new Port("port_south_b", BooleanProperty.create("port_south_b"), 1, 0, 2, Direction.NORTH),
-            new Port("port_west_a", BooleanProperty.create("port_west_a"), -1, 0, 0, Direction.EAST),
-            new Port("port_west_b", BooleanProperty.create("port_west_b"), -1, 0, 1, Direction.EAST),
-            new Port("port_down_a", BooleanProperty.create("port_down_a"), 0, -1, 0, Direction.UP),
-            new Port("port_down_b", BooleanProperty.create("port_down_b"), 1, -1, 0, Direction.UP),
-            new Port("port_down_c", BooleanProperty.create("port_down_c"), 0, -1, 1, Direction.UP),
-            new Port("port_down_d", BooleanProperty.create("port_down_d"), 1, -1, 1, Direction.UP));
+    public static final java.util.List<Port> PORTS = LargeMachineStructure.PORTS.stream()
+            .map(spec -> new Port(spec.name(), BooleanProperty.create(spec.name()),
+                    spec.dx(), spec.dy(), spec.dz(), spec.towardMachine()))
+            .toList();
 
     /** 12 个接点状态属性（名字 → 属性）。模型 blockstate 按它在该口切「开口 / 已接」两态。 */
     public static final Map<String, BooleanProperty> PORT_PROPERTIES = buildPortProperties();

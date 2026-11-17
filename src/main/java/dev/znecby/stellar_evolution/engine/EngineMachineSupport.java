@@ -3,6 +3,7 @@ package dev.znecby.stellar_evolution.engine;
 import dev.znecby.stellar_evolution.StellarEvolution;
 import dev.znecby.stellar_evolution.bio.BioMachineBlocks;
 import dev.znecby.stellar_evolution.large.LargeMachineFluidHandler;
+import dev.znecby.stellar_evolution.large.LargeMachineStructure;
 import dev.znecby.stellar_evolution.pipe.CopperPipeBlock;
 import dev.znecby.stellar_evolution.pipe.MachinePipeBlock;
 import java.util.ArrayList;
@@ -36,10 +37,7 @@ public final class EngineMachineSupport {
     private static final Set<String> VACUUM_DIMENSIONS = Set.of("moon", "orbit", "space");
 
     /** 一台机器占据的 8 格偏移（主方块在 (0,0,0)）。 */
-    public static final int[][] CELL_OFFSETS = {
-            {0, 0, 0}, {1, 0, 0}, {0, 1, 0}, {0, 0, 1},
-            {1, 1, 0}, {1, 0, 1}, {0, 1, 1}, {1, 1, 1}
-    };
+    public static final int[][] CELL_OFFSETS = LargeMachineStructure.CELL_OFFSETS;
 
     /** 整台机器占的 8 格世界坐标。 */
     public static List<BlockPos> cells(BlockPos origin) {
