@@ -119,6 +119,11 @@ processResources {
     from('guidebook') {
         into 'assets/stellar_evolution/guidebook'
     }
+    // Gradle 不会清理已从源里删除的资源副本：删 / 改名 worldgen、模型、lang 后，
+    // build/resources/main 仍会带着旧文件进 jar。任务真正执行时先清空输出目录。
+    doFirst {
+        delete layout.buildDirectory.dir('resources/main')
+    }
 }
 
 // 单元测试运行方式：直接以命令行直传 -cp 启动 JUnit ConsoleLauncher（见上方 test 任务被禁用的原因）。
