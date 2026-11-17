@@ -256,7 +256,7 @@ public final class BioMachineBlocks {
 
     /** 扫一遍外沿 12 个接管口，把「该面是否接着铜管」写回本方块状态。 */
     public static boolean refreshPorts(Level level, BlockPos origin) {
-        return LargeMachineStructureOps.refreshPorts(level, origin, BioMachineBlock.class, PORTS);
+        return LargeMachineStructureOps.refreshPorts(level, origin, BioMachineBlock.class::isInstance, PORTS);
     }
 
     /** 强制重算这 8 格的光照（修复历史存档里「旧填充格挡光」留下的暗块）。 */
@@ -267,7 +267,7 @@ public final class BioMachineBlocks {
     /** 从某个填充格出发，找出它所属机器的主方块位置（破坏填充格时用）。 */
     @Nullable
     public static BlockPos findMachine(BlockGetter level, BlockPos shellPos) {
-        return LargeMachineStructureOps.findMachine(level, shellPos, BioMachineBlock.class);
+        return LargeMachineStructureOps.findMachine(level, shellPos, BioMachineBlock.class::isInstance);
     }
 
     public static void register(IEventBus bus) {

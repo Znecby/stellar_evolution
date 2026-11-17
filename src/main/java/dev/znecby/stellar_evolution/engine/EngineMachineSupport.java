@@ -4,8 +4,7 @@ import dev.znecby.stellar_evolution.StellarEvolution;
 import dev.znecby.stellar_evolution.bio.BioMachineBlocks;
 import dev.znecby.stellar_evolution.large.LargeMachineFluidHandler;
 import dev.znecby.stellar_evolution.large.LargeMachineStructure;
-import dev.znecby.stellar_evolution.pipe.CopperPipeBlock;
-import dev.znecby.stellar_evolution.pipe.MachinePipeBlock;
+import dev.znecby.stellar_evolution.large.LargeMachineStructureOps;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -56,92 +55,32 @@ public final class EngineMachineSupport {
 
     /** 8 格里除主方块外的 7 格是否都能被占用（放机器前的检查）。 */
     public static boolean canOccupy(BlockGetter level, BlockPos origin) {
-        for (int[] offset : CELL_OFFSETS) {
-            if (offset[0] == 0 && offset[1] == 0 && offset[2] == 0) {
-                continue;
-            }
-            if (!level.getBlockState(origin.offset(offset[0], offset[1], offset[2])).canBeReplaced()) {
-                return false;
-            }
-        }
-        return true;
+        return LargeMachineStructureOps.canOccupy(level, origin);
     }
 
     /** 把另外 7 格填成对应的不可见填充格；返回本次补了几格。 */
     public static int fillShells(Level level, BlockPos origin, Block shell) {
-        int filled = 0;
-        for (int[] offset : CELL_OFFSETS) {
-            if (offset[0] == 0 && offset[1] == 0 && offset[2] == 0) {
-                continue;
-            }
-            BlockPos pos = origin.offset(offset[0], offset[1], offset[2]);
-            if (level.getBlockState(pos).canBeReplaced()) {
-                level.setBlock(pos, shell.defaultBlockState(), 3);
-                filled++;
-            }
-        }
-        return filled;
+        return LargeMachineStructureOps.fillShells(level, origin, shell.defaultBlockState());
     }
 
     /** 清掉一台机器占的另外 7 格填充格（任一种引擎填充格都清）。 */
     public static void clearShells(Level level, BlockPos origin) {
-        for (int[] offset : CELL_OFFSETS) {
-            if (offset[0] == 0 && offset[1] == 0 && offset[2] == 0) {
-                continue;
-            }
-            BlockPos pos = origin.offset(offset[0], offset[1], offset[2]);
-            if (level.getBlockState(pos).getBlock() instanceof EngineMachineShellBlock) {
-                level.setBlock(pos, net.minecraft.world.level.block.Blocks.AIR.defaultBlockState(), 3);
-            }
-        }
+        LargeMachineStructureOps.clearShells(level, origin, EngineMachineShellBlock.class);
     }
 
     /** 从某个填充格出发，找出它所属机器的主方块位置（破坏填充格时用）。 */
     @Nullable
     public static BlockPos findMachine(BlockGetter level, BlockPos shellPos) {
-        for (int dx = 0; dx <= 1; dx++) {
-            for (int dy = 0; dy <= 1; dy++) {
-                for (int dz = 0; dz <= 1; dz++) {
-                    if (dx == 0 && dy == 0 && dz == 0) {
-                        continue;
-                    }
-                    BlockPos candidate = shellPos.offset(-dx, -dy, -dz);
-                    if (level.getBlockState(candidate).getBlock() instanceof EngineMachineBlock) {
-                        return candidate;
-                    }
-                }
-            }
-        }
-        return null;
+        return LargeMachineStructureOps.findMachine(level, shellPos, EngineMachineBlock.class::isInstance);
     }
 
     /**
-     * 刷新 12 个「机械管接点」状态（与生化 / 石化机器同一轮询口径，见 {@link BioMachineBlocks#refreshPorts}）：
+     * 刷新 12 个「机械管接点」状态（与生化 / 石化机器同一轮询口径）：
      * 接点上贴着「愿意连这台机器」的机械管 → 铜垫 capped，否则 open。
      */
     public static boolean refreshPorts(Level level, BlockPos origin) {
-        BlockState state = level.getBlockState(origin);
-        if (!(state.getBlock() instanceof EngineMachineBlock)) {
-            return false;
-        }
-        BlockState updated = state;
-        for (BioMachineBlocks.Port port : BioMachineBlocks.PORTS) {
-            BlockPos portPos = origin.offset(port.dx(), port.dy(), port.dz());
-            BlockState pipeState = level.getBlockState(portPos);
-            boolean connected = (pipeState.getBlock() instanceof MachinePipeBlock
-                    && pipeState.getValue(MachinePipeBlock.CONNECTIONS.get(port.towardMachine())))
-                    || (pipeState.getBlock() instanceof CopperPipeBlock
-                    && CopperPipeBlock.connectsToMachine(level, portPos,
-                    portPos.relative(port.towardMachine()), port.towardMachine()));
-            if (updated.getValue(port.property()) != connected) {
-                updated = updated.setValue(port.property(), connected);
-            }
-        }
-        if (updated == state) {
-            return false;
-        }
-        level.setBlock(origin, updated, Block.UPDATE_ALL);
-        return true;
+        return LargeMachineStructureOps.refreshPorts(level, origin,
+                EngineMachineBlock.class::isInstance, BioMachineBlocks.PORTS);
     }
 
     /** 在机械管网的「输入」储罐里找第一种符合条件的流体；没有则 null。 */

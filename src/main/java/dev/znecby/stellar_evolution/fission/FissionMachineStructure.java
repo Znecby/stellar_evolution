@@ -2,8 +2,7 @@ package dev.znecby.stellar_evolution.fission;
 
 import dev.znecby.stellar_evolution.StellarEvolution;
 import dev.znecby.stellar_evolution.large.LargeMachineStructure;
-import dev.znecby.stellar_evolution.pipe.CopperPipeBlock;
-import dev.znecby.stellar_evolution.pipe.MachinePipeBlock;
+import dev.znecby.stellar_evolution.large.LargeMachineStructureOps;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +14,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -50,7 +48,8 @@ public final class FissionMachineStructure {
     // ------------------------------------------------------------------ 接管口（12 个，照石化线几何）
 
     /** 一个接点：状态属性 + 它贴着的那一格（相对主方块）+ 铜管指向机器的方向。 */
-    public record Port(String name, BooleanProperty property, int dx, int dy, int dz, Direction towardMachine) {}
+    public record Port(String name, BooleanProperty property, int dx, int dy, int dz, Direction towardMachine)
+            implements LargeMachineStructureOps.BoundPort {}
 
     public static final List<Port> PORTS = LargeMachineStructure.PORTS.stream()
             .map(spec -> new Port(spec.name(), BooleanProperty.create(spec.name()),
@@ -281,43 +280,14 @@ public final class FissionMachineStructure {
 
     /** 扫一遍机器外沿的 12 个接管口格子，把「该面是否接着铜管」写回本方块状态。 */
     public static boolean refreshPorts(Level level, BlockPos origin) {
-        BlockState state = level.getBlockState(origin);
-        if (!isMachine(state.getBlock())) {
-            return false;
-        }
-        BlockState updated = state;
-        for (Port port : PORTS) {
-            BlockPos portPos = origin.offset(port.dx(), port.dy(), port.dz());
-            BlockState pipeState = level.getBlockState(portPos);
-            boolean connected = (pipeState.getBlock() instanceof MachinePipeBlock
-                    && pipeState.getValue(MachinePipeBlock.CONNECTIONS.get(port.towardMachine())))
-                    || (pipeState.getBlock() instanceof CopperPipeBlock
-                    && CopperPipeBlock.connectsToMachine(level, portPos,
-                    portPos.relative(port.towardMachine()), port.towardMachine()));
-            if (updated.getValue(port.property()) != connected) {
-                updated = updated.setValue(port.property(), connected);
-            }
-        }
-        if (updated == state) {
-            return false;
-        }
-        level.setBlock(origin, updated, Block.UPDATE_ALL);
-        return true;
+        return LargeMachineStructureOps.refreshPorts(level, origin, FissionMachineStructure::isMachine, PORTS);
     }
 
     // ------------------------------------------------------------------ 占位格
 
     /** 8 格里除主方块外的 7 格是否都能被占用。 */
     public static boolean canOccupy(BlockGetter level, BlockPos origin) {
-        for (int[] offset : CELL_OFFSETS) {
-            if (offset[0] == 0 && offset[1] == 0 && offset[2] == 0) {
-                continue;
-            }
-            if (!level.getBlockState(origin.offset(offset[0], offset[1], offset[2])).canBeReplaced()) {
-                return false;
-            }
-        }
-        return true;
+        return LargeMachineStructureOps.canOccupy(level, origin);
     }
 
     /** 填充格方块：按主方块的机器 id 选对应那一种（认不出 → null，不填）。 */
@@ -331,34 +301,12 @@ public final class FissionMachineStructure {
     /** 把另外 7 格填成不可见填充格；返回本次补了几格。 */
     public static int fillShells(Level level, BlockPos origin) {
         Block shell = shellFor(level.getBlockState(origin).getBlock());
-        if (shell == null) {
-            return 0;
-        }
-        int filled = 0;
-        for (int[] offset : CELL_OFFSETS) {
-            if (offset[0] == 0 && offset[1] == 0 && offset[2] == 0) {
-                continue;
-            }
-            BlockPos pos = origin.offset(offset[0], offset[1], offset[2]);
-            if (level.getBlockState(pos).canBeReplaced()) {
-                level.setBlock(pos, shell.defaultBlockState(), 3);
-                filled++;
-            }
-        }
-        return filled;
+        return shell == null ? 0 : LargeMachineStructureOps.fillShells(level, origin, shell.defaultBlockState());
     }
 
     /** 清掉一台机器占的另外 7 格填充格。 */
     public static void clearShells(Level level, BlockPos origin) {
-        for (int[] offset : CELL_OFFSETS) {
-            if (offset[0] == 0 && offset[1] == 0 && offset[2] == 0) {
-                continue;
-            }
-            BlockPos pos = origin.offset(offset[0], offset[1], offset[2]);
-            if (level.getBlockState(pos).getBlock() instanceof FissionMachineShellBlock) {
-                level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
-            }
-        }
+        LargeMachineStructureOps.clearShells(level, origin, FissionMachineShellBlock.class);
     }
 
     /** 旧存档 / 自愈调用：朝向缺失时按北处理。 */
@@ -379,27 +327,12 @@ public final class FissionMachineStructure {
     /** 从某个填充格出发，找出所属机器的主方块位置。 */
     @Nullable
     public static BlockPos findMachine(BlockGetter level, BlockPos shellPos) {
-        for (int dx = 0; dx <= 1; dx++) {
-            for (int dy = 0; dy <= 1; dy++) {
-                for (int dz = 0; dz <= 1; dz++) {
-                    if (dx == 0 && dy == 0 && dz == 0) {
-                        continue;
-                    }
-                    BlockPos candidate = shellPos.offset(-dx, -dy, -dz);
-                    if (isMachine(level.getBlockState(candidate).getBlock())) {
-                        return candidate;
-                    }
-                }
-            }
-        }
-        return null;
+        return LargeMachineStructureOps.findMachine(level, shellPos, FissionMachineStructure::isMachine);
     }
 
     /** 强制重算这 8 格的光照（修复旧存档「填充格挡光」留下的暗块）。 */
     public static void refreshLight(Level level, BlockPos origin) {
-        for (int[] offset : CELL_OFFSETS) {
-            level.getLightEngine().checkBlock(origin.offset(offset[0], offset[1], offset[2]));
-        }
+        LargeMachineStructureOps.refreshLight(level, origin);
     }
 
     /** 机器 8 格的外沿位置（扫慢化剂 / 找相邻方块用）。 */

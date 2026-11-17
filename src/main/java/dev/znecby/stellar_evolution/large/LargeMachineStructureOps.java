@@ -3,6 +3,7 @@ package dev.znecby.stellar_evolution.large;
 import dev.znecby.stellar_evolution.pipe.CopperPipeBlock;
 import dev.znecby.stellar_evolution.pipe.MachinePipeBlock;
 import java.util.List;
+import java.util.function.Predicate;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
@@ -84,9 +85,12 @@ public final class LargeMachineStructureOps {
         return state.hasProperty(facing) ? state.getValue(facing) : Direction.NORTH;
     }
 
-    /** 从某个填充格出发，找出它所属机器的主方块位置（破坏填充格时用）。 */
+    /**
+     * 从某个填充格出发，找出它所属机器的主方块位置（破坏填充格时用）。
+     * <p>{@code isMachine} 用谓词而不是单个 Class：裂变线的主方块有机器 / 反应堆 / 汽轮机三种类型。
+     */
     @Nullable
-    public static BlockPos findMachine(BlockGetter level, BlockPos shellPos, Class<? extends Block> machineClass) {
+    public static BlockPos findMachine(BlockGetter level, BlockPos shellPos, Predicate<Block> isMachine) {
         for (int dx = 0; dx <= 1; dx++) {
             for (int dy = 0; dy <= 1; dy++) {
                 for (int dz = 0; dz <= 1; dz++) {
@@ -94,7 +98,7 @@ public final class LargeMachineStructureOps {
                         continue;
                     }
                     BlockPos candidate = shellPos.offset(-dx, -dy, -dz);
-                    if (machineClass.isInstance(level.getBlockState(candidate).getBlock())) {
+                    if (isMachine.test(level.getBlockState(candidate).getBlock())) {
                         return candidate;
                     }
                 }
@@ -117,10 +121,10 @@ public final class LargeMachineStructureOps {
      *
      * @return 是否真的改了状态
      */
-    public static boolean refreshPorts(Level level, BlockPos origin, Class<? extends Block> machineClass,
+    public static boolean refreshPorts(Level level, BlockPos origin, Predicate<Block> isMachine,
                                        List<? extends BoundPort> ports) {
         BlockState state = level.getBlockState(origin);
-        if (!machineClass.isInstance(state.getBlock())) {
+        if (!isMachine.test(state.getBlock())) {
             return false;
         }
         BlockState updated = state;

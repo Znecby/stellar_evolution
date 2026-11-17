@@ -90,7 +90,7 @@ public final class PetroMachineBlocks {
 
     /** 扫一遍外沿 12 个接管口，把「该面是否接着铜管」写回本方块状态。 */
     public static boolean refreshPorts(Level level, BlockPos origin) {
-        return LargeMachineStructureOps.refreshPorts(level, origin, PetroMachineBlock.class, PORTS);
+        return LargeMachineStructureOps.refreshPorts(level, origin, PetroMachineBlock.class::isInstance, PORTS);
     }
 
     private static BlockBehaviour.Properties machineProperties(String name) {
@@ -242,7 +242,7 @@ public final class PetroMachineBlocks {
     /** 从某个填充格出发，找出它所属机器的主方块位置（破坏填充格时用）。 */
     @Nullable
     public static BlockPos findMachine(BlockGetter level, BlockPos shellPos) {
-        return LargeMachineStructureOps.findMachine(level, shellPos, PetroMachineBlock.class);
+        return LargeMachineStructureOps.findMachine(level, shellPos, PetroMachineBlock.class::isInstance);
     }
 
     /** 强制重算这 8 格的光照（修复历史存档里「旧填充格挡光」留下的暗块）。 */
