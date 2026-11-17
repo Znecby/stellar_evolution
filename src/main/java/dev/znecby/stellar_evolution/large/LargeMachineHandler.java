@@ -34,8 +34,9 @@ public abstract class LargeMachineHandler<T extends Resource> implements Resourc
     private long tick = Long.MIN_VALUE;
     /** 内部视角：含虚拟源（铜格栅），机器取料 / 放料用。 */
     private List<Ref<T>> refs = List.of();
-    /** 对外视角（别的模组 / Jade）：可隐藏虚拟源，避免把「14 位数的水罐」摆给玩家看。 */
-    private List<Ref<T>> externalRefs = List.of();
+    /** 对外视角（别的模组 / Jade）：可隐藏虚拟源，避免把「14 位数的水罐」摆给玩家看。按需构建。 */
+    @Nullable
+    private List<Ref<T>> externalRefs;
 
     protected LargeMachineHandler(LargeMachine machine) {
         this.machine = machine;
@@ -70,9 +71,18 @@ public abstract class LargeMachineHandler<T extends Resource> implements Resourc
         if (now != tick) {
             tick = now;
             refs = build(level, false);
-            externalRefs = build(level, true);
+            // 对外视角只在真的被外部能力 / Jade 查询时才构建：绝大多数 tick 只有机器自己取料。
+            externalRefs = null;
         }
-        return external ? externalRefs : refs;
+        if (!external) {
+            return refs;
+        }
+        List<Ref<T>> view = externalRefs;
+        if (view == null) {
+            view = build(level, true);
+            externalRefs = view;
+        }
+        return view;
     }
 
     private List<Ref<T>> build(Level level, boolean external) {
