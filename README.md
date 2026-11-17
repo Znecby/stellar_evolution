@@ -142,6 +142,10 @@ The built jar is written to `build/libs/stellar_evolution-alpha0.1.0.jar`.
 - Developer documentation is maintained locally and is not included in this repository.
 - The in-game GuideME guidebook source lives in [`guidebook/`](guidebook/) and is bundled with the mod.
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and pull request guidelines. For security reports, follow [SECURITY.md](SECURITY.md).
+
 ## License
 
 This project is licensed under the **MIT License**.
