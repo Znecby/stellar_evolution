@@ -90,6 +90,20 @@ The mod has **no hard dependencies**. The following integrations are optional:
 
 ## Building from Source
 
+### Development dependencies
+
+The build references compile-only API jars for the optional integrations. Create `run/mods/` and place these files there before building:
+
+| Mod | File | Download |
+|---|---|---|
+| JEI | `jei-26.1.2-neoforge-29.43.0.107.jar` | [Modrinth versions](https://modrinth.com/mod/jei/versions?g=26.1.2&l=neoforge) |
+| Jade | `jade-26.1.8-neoforge.jar` | [Modrinth versions](https://modrinth.com/mod/jade/versions?g=26.1.2&l=neoforge) |
+| GuideME | `guideme-26.1.17-beta.jar` | [Modrinth versions](https://modrinth.com/mod/guideme/versions?g=26.1.2&l=neoforge) |
+
+`run/` is git-ignored, so these jars are not part of the repository. They are only needed for compilation; the mod itself keeps all three integrations optional at runtime.
+
+### Build
+
 ```bash
 git clone https://github.com/Znecby/stellar_evolution.git
 cd stellar_evolution

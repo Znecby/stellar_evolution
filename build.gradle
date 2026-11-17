@@ -49,7 +49,7 @@ dependencies {
     compileOnly files('run/mods/jade-26.1.8-neoforge.jar')
     // GuideME 手册（仅编译需要；运行时由 run/mods 中的 guideme jar 提供，未安装时不加载手册代码）
     compileOnly files('run/mods/guideme-26.1.17-beta.jar')
-    // Curios 饰品栏 API 已随「刷宝」内容移出（见 C:\MCmod项目\刷宝模组遗留），不再依赖
+    // Curios 饰品栏 API 已随旧「刷宝」内容移出，不再依赖
     // JUnit 5 单元测试（针对 kinetic.api 纯逻辑层）
     testImplementation platform('org.junit:junit-bom:5.11.4')
     testImplementation 'org.junit.jupiter:junit-jupiter'
