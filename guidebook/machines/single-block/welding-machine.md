@@ -8,7 +8,6 @@ categories:
   - machines
 item_ids:
   - stellar_evolution:welding_machine
-  - stellar_evolution:welding_plate
   - stellar_evolution:rugged_tungsten_welding_plate
   - stellar_evolution:rugged_lead_welding_plate
   - stellar_evolution:rugged_stainless_steel_welding_plate
