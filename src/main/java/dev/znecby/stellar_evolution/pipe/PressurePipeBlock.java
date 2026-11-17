@@ -22,12 +22,10 @@ import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /**
@@ -50,67 +48,20 @@ import net.minecraft.world.phys.shapes.VoxelShape;
  * （臂模型只画 -Z 方向，其余方向用 {@code y/x} 旋转复用）。
  */
 public class PressurePipeBlock extends Block {
-    /** 六个方向 → 连接状态属性（沿用原版 {@code BlockStateProperties} 的那六个，语义与 {@code PipeBlock} 一致）。 */
-    public static final Map<Direction, BooleanProperty> CONNECTIONS = Map.of(
-            Direction.NORTH, BlockStateProperties.NORTH,
-            Direction.EAST, BlockStateProperties.EAST,
-            Direction.SOUTH, BlockStateProperties.SOUTH,
-            Direction.WEST, BlockStateProperties.WEST,
-            Direction.UP, BlockStateProperties.UP,
-            Direction.DOWN, BlockStateProperties.DOWN);
+    /** 六个方向 → 连接状态属性（与其它管道共用同一份定义，见 {@link PipeParts}）。 */
+    public static final Map<Direction, BooleanProperty> CONNECTIONS = PipeParts.CONNECTIONS;
 
     /** 六个方向 → 「该端被手动切断」属性。为 true 时强制该方向不连接（剪刀右键切换）。 */
-    public static final Map<Direction, BooleanProperty> CUTS = Map.of(
-            Direction.NORTH, BooleanProperty.create("north_cut"),
-            Direction.EAST, BooleanProperty.create("east_cut"),
-            Direction.SOUTH, BooleanProperty.create("south_cut"),
-            Direction.WEST, BooleanProperty.create("west_cut"),
-            Direction.UP, BooleanProperty.create("up_cut"),
-            Direction.DOWN, BooleanProperty.create("down_cut"));
+    public static final Map<Direction, BooleanProperty> CUTS = PipeParts.CUTS;
 
-    /** 固定顺序的方向表，用于把 6 个连接属性打包成一个 6 位掩码（索引对应 {@link #SHAPES} 的位）。 */
-    private static final Direction[] DIRECTIONS = {
-            Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST, Direction.UP, Direction.DOWN};
-
-    /** 常驻的中心空腔框（外径 6px；空心只在模型上体现，碰撞按实心 6×6 算）。 */
-    private static final VoxelShape CENTER = Block.box(5.0, 5.0, 5.0, 11.0, 11.0, 11.0);
-
-    /** 每个方向的管臂：从该方向的面起、6px 见方、伸到中心框边界。 */
-    private static final VoxelShape[] ARM_SHAPES = {
-            Block.box(5.0, 5.0, 0.0, 11.0, 11.0, 6.0),     // NORTH (-Z)
-            Block.box(10.0, 5.0, 5.0, 16.0, 11.0, 11.0),   // EAST  (+X)
-            Block.box(5.0, 5.0, 10.0, 11.0, 11.0, 16.0),   // SOUTH (+Z)
-            Block.box(0.0, 5.0, 5.0, 6.0, 11.0, 11.0),     // WEST  (-X)
-            Block.box(5.0, 10.0, 5.0, 11.0, 16.0, 11.0),   // UP    (+Y)
-            Block.box(5.0, 0.0, 5.0, 11.0, 6.0, 11.0)};    // DOWN  (-Y)
-
-    /** 6 位掩码 → 预合并好的形状（中心 + 各连接方向的管臂），避免每次查询都重新求并集。 */
-    private static final VoxelShape[] SHAPES = new VoxelShape[64];
-
-    static {
-        for (int mask = 0; mask < SHAPES.length; mask++) {
-            VoxelShape shape = CENTER;
-            for (int i = 0; i < DIRECTIONS.length; i++) {
-                if ((mask & (1 << i)) != 0) {
-                    shape = Shapes.or(shape, ARM_SHAPES[i]);
-                }
-            }
-            SHAPES[mask] = shape;
-        }
-    }
+    /** 6px 管身几何：单根管臂（剪刀瞄准）+ 64 个预合并形状（选择框 / 碰撞箱）。 */
+    private static final PipeParts.ShapeSet SHAPE_SET = PipeParts.shapeSet(5.0, 11.0);
 
     public PressurePipeBlock(Properties properties) {
         super(properties);
         // BooleanProperty 的隐式默认值是 true（VALUES = [true, false]）—— 不显式登记默认态的话，
         // 6 个连接位与 6 个切断位都会是 true，后者会让 updateShape 每次都把连接强制关掉。
-        BlockState defaultState = defaultBlockState();
-        for (BooleanProperty connection : CONNECTIONS.values()) {
-            defaultState = defaultState.setValue(connection, false);
-        }
-        for (BooleanProperty cut : CUTS.values()) {
-            defaultState = defaultState.setValue(cut, false);
-        }
-        registerDefaultState(defaultState);
+        registerDefaultState(PipeParts.allDisconnected(defaultBlockState()));
     }
 
     @Override
@@ -118,33 +69,21 @@ public class PressurePipeBlock extends Block {
         return simpleCodec(PressurePipeBlock::new);
     }
 
-    /** 把当前连接状态打包成 6 位掩码（位序同 {@link #DIRECTIONS}），用作 {@link #SHAPES} 的索引。 */
-    private static int mask(BlockState state) {
-        int mask = 0;
-        for (int i = 0; i < DIRECTIONS.length; i++) {
-            if (state.getValue(CONNECTIONS.get(DIRECTIONS[i]))) {
-                mask |= 1 << i;
-            }
-        }
-        return mask;
-    }
-
     /** 选择框 = 管身形状（中心框 + 已连接的管臂）。 */
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPES[mask(state)];
+        return SHAPE_SET.shapes()[PipeParts.mask(state)];
     }
 
     /** 碰撞箱与选择框一致，只按管身占位（空心只在模型上体现）。 */
     @Override
     protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPES[mask(state)];
+        return SHAPE_SET.shapes()[PipeParts.mask(state)];
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        CONNECTIONS.values().forEach(builder::add);
-        CUTS.values().forEach(builder::add);
+        PipeParts.addProperties(builder);
     }
 
     /** 放置时按「6 个邻居各自是不是压力管 / 蒸汽端点」定初始连接状态；默认态（全 false）就是一根孤立的短接头。 */
@@ -253,10 +192,10 @@ public class PressurePipeBlock extends Block {
     /** 判定玩家「对准的那一端」：命中管臂用该臂方向，否则退回命中面法线。 */
     private static Direction aimedDirection(BlockState state, BlockPos pos, BlockHitResult hitResult) {
         Vec3 local = hitResult.getLocation().subtract(pos.getX(), pos.getY(), pos.getZ());
-        for (int i = 0; i < DIRECTIONS.length; i++) {
-            if (state.getValue(CONNECTIONS.get(DIRECTIONS[i]))
-                    && ARM_SHAPES[i].bounds().inflate(0.01).contains(local)) {
-                return DIRECTIONS[i];
+        for (int i = 0; i < PipeParts.DIRECTIONS.length; i++) {
+            if (state.getValue(CONNECTIONS.get(PipeParts.DIRECTIONS[i]))
+                    && SHAPE_SET.arms()[i].bounds().inflate(0.01).contains(local)) {
+                return PipeParts.DIRECTIONS[i];
             }
         }
         return hitResult.getDirection();

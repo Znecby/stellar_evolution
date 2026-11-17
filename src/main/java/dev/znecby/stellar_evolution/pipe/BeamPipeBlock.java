@@ -29,13 +29,11 @@ import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /**
@@ -60,65 +58,22 @@ public class BeamPipeBlock extends Block {
     /** 粒子流类型（存 {@link StreamType#ordinal()}；{@link #EMPTY} = 空管）。 */
     public static final IntegerProperty STREAM = IntegerProperty.create("stream", 0, EMPTY);
 
-    /** 六个方向 → 连接状态属性。 */
-    public static final Map<Direction, BooleanProperty> CONNECTIONS = Map.of(
-            Direction.NORTH, BlockStateProperties.NORTH,
-            Direction.EAST, BlockStateProperties.EAST,
-            Direction.SOUTH, BlockStateProperties.SOUTH,
-            Direction.WEST, BlockStateProperties.WEST,
-            Direction.UP, BlockStateProperties.UP,
-            Direction.DOWN, BlockStateProperties.DOWN);
+    /** 六个方向 → 连接状态属性（与其它管道共用同一份定义，见 {@link PipeParts}）。 */
+    public static final Map<Direction, BooleanProperty> CONNECTIONS = PipeParts.CONNECTIONS;
 
     /** 六个方向 → 「该端被手动切断」属性。 */
-    public static final Map<Direction, BooleanProperty> CUTS = Map.of(
-            Direction.NORTH, BooleanProperty.create("north_cut"),
-            Direction.EAST, BooleanProperty.create("east_cut"),
-            Direction.SOUTH, BooleanProperty.create("south_cut"),
-            Direction.WEST, BooleanProperty.create("west_cut"),
-            Direction.UP, BooleanProperty.create("up_cut"),
-            Direction.DOWN, BooleanProperty.create("down_cut"));
-
-    private static final Direction[] DIRECTIONS = {
-            Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST, Direction.UP, Direction.DOWN};
+    public static final Map<Direction, BooleanProperty> CUTS = PipeParts.CUTS;
 
     /** 换流类型时最多扫多少根管子（防止误操作扫到巨型管网卡顿）。 */
     private static final int MAX_NETWORK_SCAN = 1_024;
 
-    private static final VoxelShape CENTER = Block.box(5.0, 5.0, 5.0, 11.0, 11.0, 11.0);
-
-    private static final VoxelShape[] ARM_SHAPES = {
-            Block.box(5.0, 5.0, 0.0, 11.0, 11.0, 6.0),
-            Block.box(10.0, 5.0, 5.0, 16.0, 11.0, 11.0),
-            Block.box(5.0, 5.0, 10.0, 11.0, 11.0, 16.0),
-            Block.box(0.0, 5.0, 5.0, 6.0, 11.0, 11.0),
-            Block.box(5.0, 10.0, 5.0, 11.0, 16.0, 11.0),
-            Block.box(5.0, 0.0, 5.0, 11.0, 6.0, 11.0)};
-
-    private static final VoxelShape[] SHAPES = new VoxelShape[64];
-
-    static {
-        for (int mask = 0; mask < SHAPES.length; mask++) {
-            VoxelShape shape = CENTER;
-            for (int i = 0; i < DIRECTIONS.length; i++) {
-                if ((mask & (1 << i)) != 0) {
-                    shape = Shapes.or(shape, ARM_SHAPES[i]);
-                }
-            }
-            SHAPES[mask] = shape;
-        }
-    }
+    /** 6px 管身几何：单根管臂（剪刀瞄准）+ 64 个预合并形状（选择框 / 碰撞箱）。 */
+    private static final PipeParts.ShapeSet SHAPE_SET = PipeParts.shapeSet(5.0, 11.0);
 
     public BeamPipeBlock(Properties properties) {
         super(properties);
-        BlockState defaultState = defaultBlockState().setValue(STREAM, EMPTY);
-        for (BooleanProperty connection : CONNECTIONS.values()) {
-            defaultState = defaultState.setValue(connection, false);
-        }
         // 默认「未切断」：同类型 / 同为空的相邻管自动连成一段；类型不同时才必须用剪刀处理
-        for (BooleanProperty cut : CUTS.values()) {
-            defaultState = defaultState.setValue(cut, false);
-        }
-        registerDefaultState(defaultState);
+        registerDefaultState(PipeParts.allDisconnected(defaultBlockState().setValue(STREAM, EMPTY)));
     }
 
     @Override
@@ -126,31 +81,20 @@ public class BeamPipeBlock extends Block {
         return simpleCodec(BeamPipeBlock::new);
     }
 
-    private static int mask(BlockState state) {
-        int mask = 0;
-        for (int i = 0; i < DIRECTIONS.length; i++) {
-            if (state.getValue(CONNECTIONS.get(DIRECTIONS[i]))) {
-                mask |= 1 << i;
-            }
-        }
-        return mask;
-    }
-
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPES[mask(state)];
+        return SHAPE_SET.shapes()[PipeParts.mask(state)];
     }
 
     @Override
     protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPES[mask(state)];
+        return SHAPE_SET.shapes()[PipeParts.mask(state)];
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(STREAM);
-        CONNECTIONS.values().forEach(builder::add);
-        CUTS.values().forEach(builder::add);
+        PipeParts.addProperties(builder);
     }
 
     /** 新放的管子一律是<strong>空管 + 全部断开</strong>：类型只在用剪刀接上时继承。 */
@@ -333,7 +277,7 @@ public class BeamPipeBlock extends Block {
         while (!frontier.isEmpty() && component.size() < MAX_NETWORK_SCAN) {
             BlockPos pos = frontier.poll();
             BlockState state = level.getBlockState(pos);
-            for (Direction direction : DIRECTIONS) {
+            for (Direction direction : PipeParts.DIRECTIONS) {
                 if (!state.getValue(CONNECTIONS.get(direction))) {
                     continue;
                 }
@@ -371,7 +315,7 @@ public class BeamPipeBlock extends Block {
         while (!frontier.isEmpty() && component.size() < MAX_NETWORK_SCAN) {
             BlockPos pos = frontier.poll();
             BlockState state = level.getBlockState(pos);
-            for (Direction direction : DIRECTIONS) {
+            for (Direction direction : PipeParts.DIRECTIONS) {
                 if (!state.getValue(CONNECTIONS.get(direction))) {
                     continue;
                 }
@@ -398,7 +342,7 @@ public class BeamPipeBlock extends Block {
     /** 这段管网旁边有没有「往外喷这种流」的机器。 */
     private static boolean hasStreamSource(Level level, Collection<BlockPos> component, int type) {
         for (BlockPos pos : component) {
-            for (Direction direction : DIRECTIONS) {
+            for (Direction direction : PipeParts.DIRECTIONS) {
                 BlockPos neighborPos = pos.relative(direction);
                 if (level.getBlockState(neighborPos).getBlock() instanceof BeamPipeBlock) {
                     continue;
@@ -426,7 +370,7 @@ public class BeamPipeBlock extends Block {
         while (!frontier.isEmpty() && network.size() < MAX_NETWORK_SCAN) {
             BlockPos pos = frontier.poll();
             BlockState state = level.getBlockState(pos);
-            for (Direction direction : DIRECTIONS) {
+            for (Direction direction : PipeParts.DIRECTIONS) {
                 if (!state.getValue(CONNECTIONS.get(direction))) {
                     continue;
                 }
@@ -449,10 +393,10 @@ public class BeamPipeBlock extends Block {
 
     private static Direction aimedDirection(BlockState state, BlockPos pos, BlockHitResult hitResult) {
         Vec3 local = hitResult.getLocation().subtract(pos.getX(), pos.getY(), pos.getZ());
-        for (int i = 0; i < DIRECTIONS.length; i++) {
-            if (state.getValue(CONNECTIONS.get(DIRECTIONS[i]))
-                    && ARM_SHAPES[i].bounds().inflate(0.01).contains(local)) {
-                return DIRECTIONS[i];
+        for (int i = 0; i < PipeParts.DIRECTIONS.length; i++) {
+            if (state.getValue(CONNECTIONS.get(PipeParts.DIRECTIONS[i]))
+                    && SHAPE_SET.arms()[i].bounds().inflate(0.01).contains(local)) {
+                return PipeParts.DIRECTIONS[i];
             }
         }
         return hitResult.getDirection();

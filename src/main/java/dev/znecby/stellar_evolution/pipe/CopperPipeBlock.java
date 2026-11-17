@@ -34,12 +34,10 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /**
@@ -68,23 +66,11 @@ import net.minecraft.world.phys.shapes.VoxelShape;
  * 中心块常驻 + 6 个方向各叠一个「臂」，臂模型只有一个（-Z 方向），其余方向用 {@code y/x} 旋转复用。
  */
 public class CopperPipeBlock extends Block implements ThermalTransmitter {
-    /** 六个方向 → 连接状态属性（沿用原版 {@code BlockStateProperties} 的那六个，语义与 {@code PipeBlock} 一致）。 */
-    public static final Map<Direction, BooleanProperty> CONNECTIONS = Map.of(
-            Direction.NORTH, BlockStateProperties.NORTH,
-            Direction.EAST, BlockStateProperties.EAST,
-            Direction.SOUTH, BlockStateProperties.SOUTH,
-            Direction.WEST, BlockStateProperties.WEST,
-            Direction.UP, BlockStateProperties.UP,
-            Direction.DOWN, BlockStateProperties.DOWN);
+    /** 六个方向 → 连接状态属性（与其它管道共用同一份定义，见 {@link PipeParts}）。 */
+    public static final Map<Direction, BooleanProperty> CONNECTIONS = PipeParts.CONNECTIONS;
 
     /** 六个方向 → 「该端被手动切断」属性。为 true 时强制该方向不连接（剪刀右键切换）。 */
-    public static final Map<Direction, BooleanProperty> CUTS = Map.of(
-            Direction.NORTH, BooleanProperty.create("north_cut"),
-            Direction.EAST, BooleanProperty.create("east_cut"),
-            Direction.SOUTH, BooleanProperty.create("south_cut"),
-            Direction.WEST, BooleanProperty.create("west_cut"),
-            Direction.UP, BooleanProperty.create("up_cut"),
-            Direction.DOWN, BooleanProperty.create("down_cut"));
+    public static final Map<Direction, BooleanProperty> CUTS = PipeParts.CUTS;
 
     /**
      * 该管所在的热压差网络是否<strong>超载</strong>。由 {@code thermal.ThermalNetwork#syncAlarm} 在服务端同步
@@ -110,36 +96,8 @@ public class CopperPipeBlock extends Block implements ThermalTransmitter {
             Blocks.WAXED_COPPER_BLOCK, Blocks.WAXED_EXPOSED_COPPER, Blocks.WAXED_WEATHERED_COPPER,
             Blocks.WAXED_OXIDIZED_COPPER);
 
-    /** 固定顺序的方向表，用于把 6 个连接属性打包成一个 6 位掩码（索引对应 {@link #SHAPES} 的位）。 */
-    private static final Direction[] DIRECTIONS = {
-            Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST, Direction.UP, Direction.DOWN};
-
-    /** 常驻的中心 4px 立方（与模型 {@code copper_pipe/core} 的 6..10 对齐）。 */
-    private static final VoxelShape CENTER = Block.box(6.0, 6.0, 6.0, 10.0, 10.0, 10.0);
-
-    /** 每个方向的管臂：从该方向的面起、4px 见方、伸到中心块边界（与模型 {@code copper_pipe/arm} 对齐）。 */
-    private static final VoxelShape[] ARM_SHAPES = {
-            Block.box(6.0, 6.0, 0.0, 10.0, 10.0, 6.0),    // NORTH (-Z)
-            Block.box(10.0, 6.0, 6.0, 16.0, 10.0, 10.0),  // EAST  (+X)
-            Block.box(6.0, 6.0, 10.0, 10.0, 10.0, 16.0),  // SOUTH (+Z)
-            Block.box(0.0, 6.0, 6.0, 6.0, 10.0, 10.0),    // WEST  (-X)
-            Block.box(6.0, 10.0, 6.0, 10.0, 16.0, 10.0),  // UP    (+Y)
-            Block.box(6.0, 0.0, 6.0, 10.0, 6.0, 10.0)};   // DOWN  (-Y)
-
-    /** 6 位掩码 → 预合并好的形状（中心 + 各连接方向的管臂），避免每次查询都重新求并集。 */
-    private static final VoxelShape[] SHAPES = new VoxelShape[64];
-
-    static {
-        for (int mask = 0; mask < SHAPES.length; mask++) {
-            VoxelShape shape = CENTER;
-            for (int i = 0; i < DIRECTIONS.length; i++) {
-                if ((mask & (1 << i)) != 0) {
-                    shape = Shapes.or(shape, ARM_SHAPES[i]);
-                }
-            }
-            SHAPES[mask] = shape;
-        }
-    }
+    /** 4px 管身几何：单根管臂（剪刀瞄准）+ 64 个预合并形状（选择框 / 碰撞箱）。 */
+    private static final PipeParts.ShapeSet SHAPE_SET = PipeParts.shapeSet(6.0, 10.0);
 
     public CopperPipeBlock(Properties properties) {
         super(properties);
@@ -147,31 +105,13 @@ public class CopperPipeBlock extends Block implements ThermalTransmitter {
         // StateDefinition.any() 取每个属性的第 0 个值）。不显式登记默认态的话，
         // 新状态的 6 个连接位与 6 个切断位都会是 true；后者会让 updateShape 的切断逻辑
         // 每次都把连接强制关掉 —— 表现为：刚放下的管子连得上，隔壁那根却永远不接管。
-        BlockState defaultState = defaultBlockState();
-        for (BooleanProperty connection : CONNECTIONS.values()) {
-            defaultState = defaultState.setValue(connection, false);
-        }
-        for (BooleanProperty cut : CUTS.values()) {
-            defaultState = defaultState.setValue(cut, false);
-        }
-        defaultState = defaultState.setValue(OVERLOADED, false).setValue(BLINKING, false);
-        registerDefaultState(defaultState);
+        registerDefaultState(PipeParts.allDisconnected(defaultBlockState())
+                .setValue(OVERLOADED, false).setValue(BLINKING, false));
     }
 
     @Override
     protected MapCodec<? extends CopperPipeBlock> codec() {
         return simpleCodec(CopperPipeBlock::new);
-    }
-
-    /** 把当前连接状态打包成 6 位掩码（位序同 {@link #DIRECTIONS}），用作 {@link #SHAPES} 的索引。 */
-    private static int mask(BlockState state) {
-        int mask = 0;
-        for (int i = 0; i < DIRECTIONS.length; i++) {
-            if (state.getValue(CONNECTIONS.get(DIRECTIONS[i]))) {
-                mask |= 1 << i;
-            }
-        }
-        return mask;
     }
 
     /**
@@ -190,19 +130,18 @@ public class CopperPipeBlock extends Block implements ThermalTransmitter {
     /** 选择框 = 管身形状（中心块 + 已连接的管臂）。 */
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPES[mask(state)];
+        return SHAPE_SET.shapes()[PipeParts.mask(state)];
     }
 
     /** 碰撞箱与选择框一致，只按管身占位。 */
     @Override
     protected VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPES[mask(state)];
+        return SHAPE_SET.shapes()[PipeParts.mask(state)];
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        CONNECTIONS.values().forEach(builder::add);
-        CUTS.values().forEach(builder::add);
+        PipeParts.addProperties(builder);
         builder.add(OVERLOADED, BLINKING);
     }
 
@@ -441,10 +380,10 @@ public class CopperPipeBlock extends Block implements ThermalTransmitter {
     /** 判定玩家「对准的那一端」：命中管臂用该臂方向，否则退回命中面法线。 */
     private static Direction aimedDirection(BlockState state, BlockPos pos, BlockHitResult hitResult) {
         Vec3 local = hitResult.getLocation().subtract(pos.getX(), pos.getY(), pos.getZ());
-        for (int i = 0; i < DIRECTIONS.length; i++) {
-            if (state.getValue(CONNECTIONS.get(DIRECTIONS[i]))
-                    && ARM_SHAPES[i].bounds().inflate(0.01).contains(local)) {
-                return DIRECTIONS[i];
+        for (int i = 0; i < PipeParts.DIRECTIONS.length; i++) {
+            if (state.getValue(CONNECTIONS.get(PipeParts.DIRECTIONS[i]))
+                    && SHAPE_SET.arms()[i].bounds().inflate(0.01).contains(local)) {
+                return PipeParts.DIRECTIONS[i];
             }
         }
         return hitResult.getDirection();
