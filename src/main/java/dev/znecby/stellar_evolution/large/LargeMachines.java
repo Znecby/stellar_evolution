@@ -424,7 +424,7 @@ public final class LargeMachines {
     }
 
     /** 这台机器是否<strong>经铜块</strong>接入热压差网络：机器<strong>任意一格</strong>的<strong>任意一面</strong>贴着铜块即可。 */
-    public static boolean touchesCopperBlock(BlockGetter level, LargeMachine machine) {
+    public static boolean touchesCopperBlock(Level level, LargeMachine machine) {
         return countCopperBlocks(level, machine) > 0;
     }
 
@@ -432,7 +432,7 @@ public final class LargeMachines {
      * 这台机器是否<strong>经铜管</strong>接入热压差网络：机器任意一格的<strong>底排</strong>贴着铜管即可。
      * <p>接管面与 {@link CopperPipeBlock#connectsTo} 一致：四侧最底层 + 正下方，顶面不接。
      */
-    public static boolean touchesCopperPipe(BlockGetter level, LargeMachine machine) {
+    public static boolean touchesCopperPipe(Level level, LargeMachine machine) {
         for (BlockPos cell : machine.occupiedCells()) {
             for (Direction direction : Direction.values()) {
                 BlockPos pipePos = cell.relative(direction);
@@ -446,7 +446,7 @@ public final class LargeMachines {
     }
 
     /** 这台机器是否接了热网：铜块或底排铜管，二者其一即可。 */
-    public static boolean touchesCopperHeat(BlockGetter level, LargeMachine machine) {
+    public static boolean touchesCopperHeat(Level level, LargeMachine machine) {
         return touchesCopperBlock(level, machine) || touchesCopperPipe(level, machine);
     }
 
@@ -480,7 +480,16 @@ public final class LargeMachines {
      * 贴在机器上的<strong>供能铜块数量</strong>（去重：同一块铜块贴着多个机器格只算一次）。
      * <p>生化机器用它分温度带：1 块厌氧 / 2 块中温 / ≥4 块高温（见 {@code FermentationKinetics#bandForCopper}）。
      */
-    public static int countCopperBlocks(BlockGetter level, LargeMachine machine) {
+    public static int countCopperBlocks(Level level, LargeMachine machine) {
+        Cache cache = cacheFor(level);
+        synchronized (cache) {
+            // 同一 tick 内同一台机器会被热网扫描与配方判定多次查询；结果只随方块变化，按 tick 缓存。
+            return cache.copperBlocks.computeIfAbsent(machine.origin().immutable(),
+                    ignored -> countCopperBlocksUncached(level, machine));
+        }
+    }
+
+    private static int countCopperBlocksUncached(Level level, LargeMachine machine) {
         Set<BlockPos> cells = new HashSet<>(machine.occupiedCells());
         Set<BlockPos> copper = new HashSet<>();
         for (BlockPos cell : cells) {
@@ -509,13 +518,8 @@ public final class LargeMachines {
      * <p>同一 tick 内同一机器只算一次（缓存）。
      */
     public static List<Connected> connectedContainers(Level level, LargeMachine machine) {
-        Cache cache = CACHES.computeIfAbsent(level, ignored -> new Cache());
+        Cache cache = cacheFor(level);
         synchronized (cache) {
-            long now = level.getGameTime();
-            if (cache.tick != now) {
-                cache.tick = now;
-                cache.byOrigin.clear();
-            }
             List<Connected> cached = cache.byOrigin.get(machine.origin());
             if (cached != null) {
                 return cached;
@@ -651,6 +655,22 @@ public final class LargeMachines {
     private static final class Cache {
         long tick = Long.MIN_VALUE;
         final Map<BlockPos, List<Connected>> byOrigin = new HashMap<>();
+        /** 每 tick 的「供能铜块数量」：同一台机器一 tick 内会被热网扫描与配方判定多次查询。 */
+        final Map<BlockPos, Integer> copperBlocks = new HashMap<>();
+    }
+
+    /** 取（必要时新建）本世界的缓存，并在跨 tick 时整表清空。 */
+    private static Cache cacheFor(Level level) {
+        Cache cache = CACHES.computeIfAbsent(level, ignored -> new Cache());
+        synchronized (cache) {
+            long now = level.getGameTime();
+            if (cache.tick != now) {
+                cache.tick = now;
+                cache.byOrigin.clear();
+                cache.copperBlocks.clear();
+            }
+        }
+        return cache;
     }
 
     private LargeMachines() {}
