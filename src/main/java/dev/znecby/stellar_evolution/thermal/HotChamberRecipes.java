@@ -776,7 +776,7 @@ public final class HotChamberRecipes {
             }
             int types = recipe.inputSlotCount();
             int items = itemCount(recipe);
-            if (!moreSpecific(types, items, bestTypes, bestItems)) {
+            if (!HotChamberRanking.moreSpecific(types, items, bestTypes, bestItems)) {
                 continue;   // 不比当前最优更具体（完全并列也不换，保留表序在前的）
             }
             if (!hasInputs(container, recipe)) {
@@ -790,17 +790,6 @@ public final class HotChamberRecipes {
             bestItems = items;
         }
         return Optional.ofNullable(best);
-    }
-
-    /**
-     * 具体度比较：<strong>输入种类多的更具体</strong>；种类相同再比<strong>总件数</strong>（吃料多的优先）。
-     * 完全并列返回 {@code false}，让表序在前的配方胜出。
-     */
-    private static boolean moreSpecific(int types, int items, int bestTypes, int bestItems) {
-        if (types != bestTypes) {
-            return types > bestTypes;
-        }
-        return items > bestItems;
     }
 
     /** 配方的输入总件数（具体度比较的第二关键字）。 */
