@@ -13,6 +13,7 @@ Stellar Evolution is a work-in-progress tech mod centered on a **thermal pressur
 >
 > **Bug reports require logs.** When opening an issue, always attach the full `latest.log` or crash report, your mod list, and clear reproduction steps. Reports without logs are usually impossible to analyze — including with AI assistance.
 
+![Build](https://github.com/Znecby/stellar_evolution/actions/workflows/build.yml/badge.svg)
 ![Minecraft](https://img.shields.io/badge/Minecraft-26.1.2-green)
 ![NeoForge](https://img.shields.io/badge/NeoForge-26.1.2.114-orange)
 ![Java](https://img.shields.io/badge/Java-25-blue)

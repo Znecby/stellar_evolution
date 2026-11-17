@@ -1,0 +1,46 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Download compile-only integration jars
+        run: |
+          set -euo pipefail
+          mkdir -p run/mods
+          download() {
+            slug="$1"
+            file="$2"
+            api="https://api.modrinth.com/v2/project/${slug}/version?game_versions=%5B%2226.1.2%22%5D&loaders=%5B%22neoforge%22%5D"
+            url=$(curl -fsSL "$api" | jq -r --arg f "$file" '[.[] | .files[] | select(.filename == $f)][0].url // empty')
+            if [ -z "$url" ]; then
+              url=$(curl -fsSL "$api" | jq -r '[.[] | .files[] | select(.primary)][0].url // empty')
+            fi
+            if [ -z "$url" ]; then
+              echo "No Modrinth file found for $slug"
+              exit 1
+            fi
+            curl -fL "$url" -o "run/mods/$file"
+          }
+          download jei "jei-26.1.2-neoforge-29.43.0.107.jar"
+          download jade "jade-26.1.8-neoforge.jar"
+          download guideme "guideme-26.1.17-beta.jar"
+      - name: Build and test
+        run: |
+          chmod +x gradlew
+          ./gradlew build runUnitTests --no-daemon --stacktrace
