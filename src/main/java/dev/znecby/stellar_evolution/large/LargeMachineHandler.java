@@ -117,9 +117,9 @@ public abstract class LargeMachineHandler<T extends Resource> implements Resourc
         return externalRefs().size();
     }
 
-    /** 内部视角：容器里任意一格有资源（含虚拟源）；机器自己判断「罐里有没有水」用。 */
+    /** 对外视角：容器里任意一格有资源（不含铜格栅这类虚拟源）；机器自己判断「罐里有没有水」用。 */
     public boolean hasAnyContent() {
-        for (Ref<T> ref : refs()) {
+        for (Ref<T> ref : externalRefs()) {
             if (!ref.handler().getResource(ref.slot()).isEmpty()
                     && ref.handler().getAmountAsLong(ref.slot()) > 0L) {
                 return true;

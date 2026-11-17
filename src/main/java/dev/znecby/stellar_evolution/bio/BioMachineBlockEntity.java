@@ -147,7 +147,7 @@ public class BioMachineBlockEntity extends BlockEntity implements LargeMachine, 
         }
     }
 
-    /** 机器网络里是否有流体（输入 / 输出容器里任意一格有量即算，含铜格栅虚拟源）。 */
+    /** 机器网络里是否有流体（输入 / 输出容器里任意一格有量即算）。 */
     private boolean fluidHandlerHasContent() {
         return fluidHandler.hasAnyContent();
     }
