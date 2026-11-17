@@ -9,6 +9,7 @@ import java.util.Collections;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.IdentityHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
@@ -82,6 +83,8 @@ public final class ThermalNetwork {
     private static final class Cache {
         long tick = Long.MIN_VALUE;
         final Map<BlockPos, Aggregate> aggregates = new HashMap<>();
+        /** 本 tick 已经同步过告警的网络（按聚合结果实例去重：同一网络的所有成员共享同一个实例）。 */
+        final Set<Aggregate> alarmSynced = Collections.newSetFromMap(new IdentityHashMap<>());
     }
 
     /**
@@ -113,7 +116,16 @@ public final class ThermalNetwork {
      * @return 实际被改动的连接件数量
      */
     public static int syncAlarm(ServerLevel level, BlockPos pos) {
-        Aggregate aggregate = aggregateAt(level, pos);
+        Cache cache = CACHES.computeIfAbsent(level, ignored -> new Cache());
+        Aggregate aggregate;
+        synchronized (cache) {
+            aggregate = aggregateIn(cache, level, pos);
+            // 同一 tick 内同一张网络只同步一次：多台消耗端各自调用，但超载状态是全网一致的。
+            // 写方块放在锁外，避免在持有缓存锁时触发邻居更新。
+            if (!cache.alarmSynced.add(aggregate)) {
+                return 0;
+            }
+        }
         boolean overloaded = aggregate.load().overloaded();
         int changed = 0;
         for (BlockPos connector : aggregate.connectors()) {
@@ -133,23 +145,29 @@ public final class ThermalNetwork {
     private static Aggregate aggregateAt(Level level, BlockPos pos) {
         Cache cache = CACHES.computeIfAbsent(level, ignored -> new Cache());
         synchronized (cache) {
-            long now = level.getGameTime();
-            if (cache.tick != now) {
-                cache.tick = now;
-                cache.aggregates.clear();
-            }
-            Aggregate cached = cache.aggregates.get(pos);
-            if (cached != null) {
-                return cached;
-            }
-            Aggregate aggregate = collect(level, pos);
-            for (BlockPos member : aggregate.members()) {
-                cache.aggregates.put(member, aggregate);
-            }
-            // 起点不在网络里时也要给出结果，避免同一 tick 反复重算同一个「无网络」位置。
-            cache.aggregates.put(pos, aggregate);
-            return aggregate;
+            return aggregateIn(cache, level, pos);
         }
+    }
+
+    /** 在已加锁的缓存里取聚合结果；跨 tick 时整表清空。 */
+    private static Aggregate aggregateIn(Cache cache, Level level, BlockPos pos) {
+        long now = level.getGameTime();
+        if (cache.tick != now) {
+            cache.tick = now;
+            cache.aggregates.clear();
+            cache.alarmSynced.clear();
+        }
+        Aggregate cached = cache.aggregates.get(pos);
+        if (cached != null) {
+            return cached;
+        }
+        Aggregate aggregate = collect(level, pos);
+        for (BlockPos member : aggregate.members()) {
+            cache.aggregates.put(member, aggregate);
+        }
+        // 起点不在网络里时也要给出结果，避免同一 tick 反复重算同一个「无网络」位置。
+        cache.aggregates.put(pos, aggregate);
+        return aggregate;
     }
 
     private static Aggregate collect(Level level, BlockPos origin) {
