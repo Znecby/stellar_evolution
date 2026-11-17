@@ -68,6 +68,13 @@ Stellar Evolution is a work-in-progress tech mod centered on a **thermal pressur
 - Pressure pipes for steam and beam pipes for particle streams.
 - Fluid-aware tank items with dynamic stack sizes.
 
+## Gallery
+
+| | |
+|---|---|
+| ![Thermal pressure network](screenshots/03-thermal-network.jpg) | ![Large multiblock machine](screenshots/01-hero-large-multiblock.jpg) |
+| ![Machine lineup](screenshots/02-machine-lineup.jpg) | ![Beam multiblock](screenshots/04-multiblock-beam.jpg) |
+
 ## Requirements
 
 | Requirement | Version |

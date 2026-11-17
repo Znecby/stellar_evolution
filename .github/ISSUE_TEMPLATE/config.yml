@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and discussion
+    url: https://github.com/Znecby/stellar_evolution/discussions
+    about: Ask questions, share setups, or discuss ideas.
+  - name: Latest release
+    url: https://github.com/Znecby/stellar_evolution/releases/latest
+    about: Download the current build and read the release notes.
