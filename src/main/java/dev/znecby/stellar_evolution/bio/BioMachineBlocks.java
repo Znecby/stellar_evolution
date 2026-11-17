@@ -2,8 +2,7 @@ package dev.znecby.stellar_evolution.bio;
 
 import dev.znecby.stellar_evolution.StellarEvolution;
 import dev.znecby.stellar_evolution.large.LargeMachineStructure;
-import dev.znecby.stellar_evolution.pipe.CopperPipeBlock;
-import dev.znecby.stellar_evolution.pipe.MachinePipeBlock;
+import dev.znecby.stellar_evolution.large.LargeMachineStructureOps;
 import java.util.EnumMap;
 import java.util.EnumSet;
 import java.util.IdentityHashMap;
@@ -81,7 +80,8 @@ public final class BioMachineBlocks {
      * <p>
      * 每个接点<b>独立</b>一个状态 —— 早先按「面」记（每侧 2 个口共用一个标志）时，接一个会让同侧另一个也变。
      */
-    public record Port(String name, BooleanProperty property, int dx, int dy, int dz, Direction towardMachine) {}
+    public record Port(String name, BooleanProperty property, int dx, int dy, int dz, Direction towardMachine)
+            implements LargeMachineStructureOps.BoundPort {}
 
     /**
      * 12 个接点：四个水平侧面各 2 个（机器 2 格宽，底排每格一个）+ 底面 4 个。
@@ -234,115 +234,40 @@ public final class BioMachineBlocks {
 
     /** 8 格里除主方块外的 7 格是否都能被占用（放机器前的检查）。 */
     public static boolean canOccupy(BlockGetter level, BlockPos origin) {
-        for (int[] offset : CELL_OFFSETS) {
-            if (offset[0] == 0 && offset[1] == 0 && offset[2] == 0) {
-                continue;
-            }
-            BlockPos pos = origin.offset(offset[0], offset[1], offset[2]);
-            if (!level.getBlockState(pos).canBeReplaced()) {
-                return false;
-            }
-        }
-        return true;
+        return LargeMachineStructureOps.canOccupy(level, origin);
     }
 
     /** 把一台机器占的另外 7 格填成不可见填充格（凑齐完整 8 格碰撞）；返回本次补了几格。 */
     public static int fillShells(Level level, BlockPos origin, BioMachineKind kind) {
         DeferredBlock<BioMachineShellBlock> shell = SHELLS.get(kind);
-        if (shell == null) {
-            return 0;
-        }
-        int filled = 0;
-        for (int[] offset : CELL_OFFSETS) {
-            if (offset[0] == 0 && offset[1] == 0 && offset[2] == 0) {
-                continue;
-            }
-            BlockPos pos = origin.offset(offset[0], offset[1], offset[2]);
-            if (level.getBlockState(pos).canBeReplaced()) {
-                level.setBlock(pos, shell.get().defaultBlockState(), 3);
-                filled++;
-            }
-        }
-        return filled;
+        return shell == null ? 0
+                : LargeMachineStructureOps.fillShells(level, origin, shell.get().defaultBlockState());
     }
 
     /** 清掉一台机器占的另外 7 格填充格（不区分种类）。 */
     public static void clearShells(Level level, BlockPos origin) {
-        for (int[] offset : CELL_OFFSETS) {
-            if (offset[0] == 0 && offset[1] == 0 && offset[2] == 0) {
-                continue;
-            }
-            BlockPos pos = origin.offset(offset[0], offset[1], offset[2]);
-            if (level.getBlockState(pos).getBlock() instanceof BioMachineShellBlock) {
-                level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
-            }
-        }
+        LargeMachineStructureOps.clearShells(level, origin, BioMachineShellBlock.class);
     }
 
     /** 旧存档 / 自愈调用：朝向缺失时按北处理。 */
     public static Direction facingOf(BlockGetter level, BlockPos origin) {
-        BlockState state = level.getBlockState(origin);
-        return state.hasProperty(BioMachineBlock.FACING) ? state.getValue(BioMachineBlock.FACING) : Direction.NORTH;
+        return LargeMachineStructureOps.facingOf(level, origin, BioMachineBlock.FACING);
     }
 
-    /**
-     * 扫一遍机器外沿的 12 个接管口格子，把「该面是否接着铜管」写回本方块的状态。
-     * <p>
-     * 为什么要轮询而不是靠 {@code updateShape}：机器占 2×2×2，而主方块只占其中一格 ——
-     * 东/南面（+X/+Z）和底面另外 3 格外面贴的管子，主方块**根本收不到邻居更新**，
-     * 所以由服务端每 tick 扫一圈（12 次查方块，代价可忽略），有变化才写状态。
-     *
-     * @return 是否真的改了状态
-     */
+    /** 扫一遍外沿 12 个接管口，把「该面是否接着铜管」写回本方块状态。 */
     public static boolean refreshPorts(Level level, BlockPos origin) {
-        BlockState state = level.getBlockState(origin);
-        if (!(state.getBlock() instanceof BioMachineBlock)) {
-            return false;
-        }
-        BlockState updated = state;
-        for (Port port : PORTS) {
-            BlockPos portPos = origin.offset(port.dx(), port.dy(), port.dz());
-            BlockState pipeState = level.getBlockState(portPos);
-            boolean connected = (pipeState.getBlock() instanceof MachinePipeBlock
-                    && pipeState.getValue(MachinePipeBlock.CONNECTIONS.get(port.towardMachine())))
-                    || (pipeState.getBlock() instanceof CopperPipeBlock
-                    && CopperPipeBlock.connectsToMachine(level, portPos,
-                    portPos.relative(port.towardMachine()), port.towardMachine()));
-            if (updated.getValue(port.property()) != connected) {
-                updated = updated.setValue(port.property(), connected);
-            }
-        }
-        if (updated == state) {
-            return false;
-        }
-        level.setBlock(origin, updated, Block.UPDATE_ALL);
-        return true;
+        return LargeMachineStructureOps.refreshPorts(level, origin, BioMachineBlock.class, PORTS);
     }
 
     /** 强制重算这 8 格的光照（修复历史存档里「旧填充格挡光」留下的暗块）。 */
     public static void refreshLight(Level level, BlockPos origin) {
-        for (int[] offset : CELL_OFFSETS) {
-            level.getLightEngine().checkBlock(origin.offset(offset[0], offset[1], offset[2]));
-        }
+        LargeMachineStructureOps.refreshLight(level, origin);
     }
 
     /** 从某个填充格出发，找出它所属机器的主方块位置（破坏填充格时用）。 */
     @Nullable
     public static BlockPos findMachine(BlockGetter level, BlockPos shellPos) {
-        for (int dx = 0; dx <= 1; dx++) {
-            for (int dy = 0; dy <= 1; dy++) {
-                for (int dz = 0; dz <= 1; dz++) {
-                    if (dx == 0 && dy == 0 && dz == 0) {
-                        continue;
-                    }
-                    BlockPos candidate = shellPos.offset(-dx, -dy, -dz);
-                    if (level.getBlockState(candidate).getBlock() instanceof BioMachineBlock) {
-                        return candidate;
-                    }
-                }
-            }
-        }
-        return null;
+        return LargeMachineStructureOps.findMachine(level, shellPos, BioMachineBlock.class);
     }
 
     public static void register(IEventBus bus) {
