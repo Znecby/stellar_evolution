@@ -111,9 +111,21 @@ public abstract class LargeMachineHandler<T extends Resource> implements Resourc
         return index >= 0 && index < list.size() ? list.get(index) : null;
     }
 
+    /** 对外能力：索引空间必须与 {@link #getResource} / {@link #insert} / {@link #extract} 一致（外部视角，隐藏虚拟源）。 */
     @Override
     public int size() {
-        return refs().size();
+        return externalRefs().size();
+    }
+
+    /** 内部视角：容器里任意一格有资源（含虚拟源）；机器自己判断「罐里有没有水」用。 */
+    public boolean hasAnyContent() {
+        for (Ref<T> ref : refs()) {
+            if (!ref.handler().getResource(ref.slot()).isEmpty()
+                    && ref.handler().getAmountAsLong(ref.slot()) > 0L) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
