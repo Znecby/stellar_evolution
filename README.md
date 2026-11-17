@@ -21,7 +21,7 @@ Stellar Evolution is a work-in-progress tech mod centered on a **thermal pressur
 
 ## Project Status
 
-- **Version:** 0.1.1
+- **Version:** 0.1.2
 - **Minecraft:** 26.1.2
 - **Loader:** NeoForge 26.1.2.114
 - **Java:** 25
@@ -92,7 +92,7 @@ The mod has **no hard dependencies**. The following integrations are optional:
 ## Installation
 
 1. Install NeoForge 26.1.2.114 for Minecraft 26.1.2.
-2. Place `stellar_evolution-alpha0.1.1.jar` into the `mods` folder.
+2. Place `stellar_evolution-alpha0.1.2.jar` into the `mods` folder.
 3. Optionally install JEI, Jade, and GuideME.
 4. Launch the game.
 
@@ -124,7 +124,7 @@ On Windows:
 .\gradlew.bat build
 ```
 
-The built jar is written to `build/libs/stellar_evolution-alpha0.1.1.jar`.
+The built jar is written to `build/libs/stellar_evolution-alpha0.1.2.jar`.
 
 ## Development
 

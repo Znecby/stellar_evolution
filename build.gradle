@@ -27,7 +27,7 @@ base {
     archivesName = project.archives_base_name
 }
 
-// 发布 jar 使用 alpha 前缀命名：stellar_evolution-alpha0.1.1.jar
+// 发布 jar 使用 alpha 前缀命名：stellar_evolution-alpha0.1.2.jar
 tasks.named('jar') {
     archiveFileName = "${project.archives_base_name}-alpha${project.mod_version}.jar"
 }
